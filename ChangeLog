@@ -1,0 +1,3657 @@
+2018-01-01  David Tardon  <dtardon@redhat.com>  [a0ac7bf84105e6fe7437ff3f920c82c29d1b14a7]
+
+	fix typo
+
+
+2018-01-01  David Tardon  <dtardon@redhat.com>  [6ec8169f04f524126a61335c0ececbefdd6b596c]
+
+	add missed check for a boost header
+
+
+2018-01-01  David Tardon  <dtardon@redhat.com>  [9b7861fd1768a6e4cd7b3ac41a1af7d65882fbec]
+
+	replace use of boost::assign by C++
+
+
+2018-01-01  David Tardon  <dtardon@redhat.com>  [1862bc1a7eae934a3f9ffc50cf8041f326a139f2]
+
+	drop another unused boost header
+
+
+2018-01-01  David Tardon  <dtardon@redhat.com>  [f59bc337126f06f3b185500c92842874f897a653]
+
+	boost::lexical_cast is unused now
+
+
+2018-01-01  David Tardon  <dtardon@redhat.com>  [19b147f88867243dbaeb8bea03bf4fd35bd18472]
+
+	drop unneeded includes
+
+
+2018-01-01  David Tardon  <dtardon@redhat.com>  [656254cac1cc87fe9ef183f0f0682ba73f0e1a15]
+
+	create RVNGString directly
+
+
+2018-01-01  David Tardon  <dtardon@redhat.com>  [2c1ccb7e9c3a4a0623764e3b379a21c657b11eae]
+
+	update NEWS
+
+
+2018-01-01  David Tardon  <dtardon@redhat.com>  [32566831cfcc4ced012529669ce73cdb3578d4f0]
+
+	cid#1371514 untrusted value as argument
+
+
+2018-01-01  David Tardon  <dtardon@redhat.com>  [ddd28cd206e1dea5eccf317ec124fa54f209a395]
+
+	cid#1371513 untrusted value as argument
+
+
+2018-01-01  David Tardon  <dtardon@redhat.com>  [c276879e680ea0bfa10e41989850cf898184ad50]
+
+	cid#1371512 untrusted value as argument
+
+
+2018-01-01  David Tardon  <dtardon@redhat.com>  [1234bbf02bf2fa317532f4afc1e4d67224301985]
+
+	cid#1371510 untrusted value as argument
+
+
+2018-01-01  David Tardon  <dtardon@redhat.com>  [3328a356446fc958c4699a6c8bd2ec2c1e07dc7c]
+
+	cid#1371505 integer overflowed argument
+
+
+2018-01-01  David Tardon  <dtardon@redhat.com>  [bac2a52b145c5ba2d4e9725972e26b3e1b745d29]
+
+	cid#1371515 untrusted value as argument
+
+
+2018-01-01  David Tardon  <dtardon@redhat.com>  [36fe247a2fb4277f0a823986ac720e74220e26e4]
+
+	cid#1427078 dereference null return value
+
+
+2018-01-01  David Tardon  <dtardon@redhat.com>  [83c43afb8cc5ba2a64d1e3d9941638be3ce5c03e]
+
+	cid#1261656 improper use of negative value
+
+
+2018-01-01  David Tardon  <dtardon@redhat.com>  [84f3479c4542bd8fb82bad2d29d4ea9e2424e895]
+
+	cid#1371516 sanitize loop bound
+
+
+2018-01-01  David Tardon  <dtardon@redhat.com>  [c4dc7ac9ef14b288c87fc773f68eb511286ae724]
+
+	cid#1371511 untrusted loop bound
+
+
+2017-12-31  David Tardon  <dtardon@redhat.com>  [7cbd65556d707059c5df9b471c921dcc8e47ced5]
+
+	prepare for release
+
+
+2017-11-24  osnola  <alonso@loria.fr>  [04de43cd28514a716a63e0b33e73e17a0a18ef2a]
+
+	typo[fix]: librevenge:mimetype->librevenge:mime-type
+
+
+2017-11-11  Miklos Vajna  <vmiklos@collabora.co.uk>  [232835e21d1f40d221b278cb8f96ca98fbf7e484]
+
+	Use auto when declaring iterators and when initializing with a cast
+
+
+2017-10-31  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [0d9e3d581afeecdd55fe3240cc87692d8332ec07]
+
+	doxygen -u
+
+
+2017-10-28  David Tardon  <dtardon@redhat.com>  [d91e2e719f0a7fbd6db891a8c13fa8c64b178515]
+
+	save some vertical space
+
+
+2017-10-28  David Tardon  <dtardon@redhat.com>  [04bfc0c1a71da71f97a7533919470f6b9f1a4f22]
+
+	drop outdated MSVC project files
+
+
+2017-10-08  Miklos Vajna  <vmiklos@collabora.co.uk>  [81bb208a0a141701a9f05e0b084bd3ab28568fee]
+
+	Convert explicit for loops to range-based ones where possible
+
+
+2017-10-07  Miklos Vajna  <vmiklos@collabora.co.uk>  [1ccf059b8cc13581aa492d831c9ebf74dfc91175]
+
+	Convert 0 to nullptr where it's used as a pointer value
+
+	To make the code easier to read, because this means the remaining zeros
+	all mean numbers.
+
+2017-10-04  Miklos Vajna  <vmiklos@collabora.co.uk>  [9465180e2fc6bb3004488f8439e79515d5aa2d6a]
+
+	Mark overriding member functions as 'override'
+
+	This does not affect the generated code (API or ABI), but:
+
+	1) Makes sure that in case the signature of one of these functions would
+	change by accident, the build breaks as the function no longer overrides
+	a base function.
+
+	2) Makes the code readable by explicitly marking all overriding
+	functions as 'override', where previously the reader had to read the
+	interface of the base class(es) as well to find out if the function is
+	virtual or not.
+
+	3) Since 'override' implies 'virtual', remove the 'virtual' keyword
+	where 'override' is present.
+
+2017-10-03  Miklos Vajna  <vmiklos@collabora.co.uk>  [9735968b3ab373f56d68a19c7b6614e99202b4c2]
+
+	Remove unused using declarations
+
+
+2017-09-28  David Tardon  <dtardon@redhat.com>  [18a426a60ad347fcbb19dba0203b71b42915fcef]
+
+	clean up includes
+
+
+2017-09-28  David Tardon  <dtardon@redhat.com>  [e3df7ab3ea3b427fd1942b351722ceb7689be504]
+
+	avoid output from fuzzers
+
+
+2017-09-27  Miklos Vajna  <vmiklos@collabora.co.uk>  [372065ab97a63751f9f64d4e3150fa1a7f9c6efc]
+
+	FictionBook3Token: silence unused parameter warning
+
+	In file included from FictionBook3Token.cpp:24:
+	FictionBook3Token.gperf:28:33: error: unused parameter 'str' [-Werror,-Wunused-parameter]
+	Perfect_Hash::hash (const char *str, unsigned int len)
+	                                ^
+
+2017-09-08  David Tardon  <dtardon@redhat.com>  [76507c411b6ebf5b4a7c59a6747da64ebc9c8b07]
+
+	assume modern enough ICU is available
+
+
+2017-09-01  David Tardon  <dtardon@redhat.com>  [bd660d86f5cb33e7e241b952e8c96172f1ccd33f]
+
+	fix new/delete mismatch
+
+
+2017-04-23  David Tardon  <dtardon@redhat.com>  [958f1abc5ea43c4b0f349788170a253147868ce0]
+
+	add format prefix to class name
+
+
+2017-04-23  David Tardon  <dtardon@redhat.com>  [d35d7c6a47a6c908ac3ac9f8180445fed480e49f]
+
+	replace dumb pointers by smart ones
+
+
+2017-04-23  David Tardon  <dtardon@redhat.com>  [415006ef9ee7e4358d91100c4cdfa83bc4239e5a]
+
+	replace dumb pointer by a smart one
+
+
+2017-04-23  David Tardon  <dtardon@redhat.com>  [06956723d132b2ee700b9a550c1c97c33b29f74b]
+
+	replace dumb pointer by a smart one
+
+
+2017-04-23  David Tardon  <dtardon@redhat.com>  [9770d06e5aa5137396492e5e8d7dbaa738a5f715]
+
+	replace dumb pointer by a smart one
+
+
+2017-04-23  David Tardon  <dtardon@redhat.com>  [abf654e5404736868b436e63ebc60230c8f779ba]
+
+	replace dumb pointers by smart ones
+
+
+2017-04-22  David Tardon  <dtardon@redhat.com>  [6aa5aa807ac4a95817fae037d050c559368f3ca2]
+
+	ofz#1217 sanitize ToC item count
+
+
+2017-04-11  David Tardon  <dtardon@redhat.com>  [b9a0739f576abcbb7f6143df1065ee08076786ea]
+
+	ofz#1067 avoid leak in ICU
+
+
+2017-04-10  David Tardon  <dtardon@redhat.com>  [a7f5d661878710dbb1715769d945ccb53b2c8c93]
+
+	avoid direct memory management
+
+
+2017-04-10  David Tardon  <dtardon@redhat.com>  [024aa9a7bdd7f4a513993e6be6e9f8fc3d47fbd9]
+
+	avoid manual memory management
+
+
+2017-04-10  David Tardon  <dtardon@redhat.com>  [266b5b9654dfd8154c32fdf60d7e814328e84a55]
+
+	ofz#1054 ensure charset converter exists
+
+
+2017-04-08  David Tardon  <dtardon@redhat.com>  [57a544041d36ae9f7febeb086fb262f731703c38]
+
+	ofz#1042 avoid out-of-bounds access in spirit
+
+
+2017-04-07  David Tardon  <dtardon@redhat.com>  [a7563129da2dd2c4ad12640e116c0d4056e10169]
+
+	build lang. manager test conditionally
+
+
+2017-04-07  David Tardon  <dtardon@redhat.com>  [0fb94005ff7a6c87ff54bd6692a5f5202a82920a]
+
+	allow to build without liblangtag
+
+	This is only a hack for simplifying build for oss-fuzz and it should not
+	be used for "real" builds.
+
+	Change-Id: I33f8ab02d77b1dee198fab2d811fb3939433c6c4
+
+2017-04-06  David Tardon  <dtardon@redhat.com>  [6fcf6e90910ceb57836230881bc5d27399178234]
+
+	ofz: skip empty input
+
+
+2017-04-06  David Tardon  <dtardon@redhat.com>  [817f4dcb31670c824d5437c7ee1970a0d684a743]
+
+	ofz: avoid leak
+
+
+2017-04-06  David Tardon  <dtardon@redhat.com>  [2e2870bc104bf8c36c43b82744cf5595a4fff1c0]
+
+	ofz: avoid leak
+
+
+2017-04-06  David Tardon  <dtardon@redhat.com>  [e83d8026030a275ca612f95fb8be515376b3fb63]
+
+	add pdb fuzzer, common for all palm-based formats
+
+
+2017-04-01  David Tardon  <dtardon@redhat.com>  [c2e1dfd1c561ead7ba5081377b0f590fdd1eddc9]
+
+	astyle
+
+
+2017-04-01  David Tardon  <dtardon@redhat.com>  [3b4f5d7b3e51cbeedf6155ca857f2aba76352654]
+
+	add fuzzing driver for oss-fuzz
+
+
+2017-01-01  David Tardon  <dtardon@redhat.com>  [339189cf249966705cfe57445561feef44878fc5]
+
+	convert boost::unordered_set to std::unordered_set
+
+
+2017-01-01  David Tardon  <dtardon@redhat.com>  [7c613ffb99367d732288dc6934e4dcdab4006fbc]
+
+	convert boost::unordered_map to std::unordered_map
+
+
+2017-01-01  David Tardon  <dtardon@redhat.com>  [e2a1614aca1a47e7edf0af9cceea112c0e7b3114]
+
+	only ignore autotools files in m4/
+
+
+2017-01-01  David Tardon  <dtardon@redhat.com>  [326bc3b87a1b29840bef371327b92e8ec5ed471e]
+
+	convert boost::function to std::function
+
+
+2017-01-01  David Tardon  <dtardon@redhat.com>  [e1cfd3c5641694c6399880344444de4c3447c970]
+
+	convert BOOST_STATIC_ASSERT to static_assert
+
+
+2017-01-01  David Tardon  <dtardon@redhat.com>  [87d0262bdb05553a5ff89b906e948395c2dfc651]
+
+	convert boost::bind to std::bind
+
+
+2017-01-01  David Tardon  <dtardon@redhat.com>  [c999d7d8e33bec8aaff37a62807d013f1407e707]
+
+	replace Spirit.Classic by Spirit
+
+
+2016-12-28  David Tardon  <dtardon@redhat.com>  [8ddc3aff0b6bfc5678ef48d716a99f5aaf385004]
+
+	WaE: defined, but not used
+
+
+2016-12-28  David Tardon  <dtardon@redhat.com>  [c8c7871ebc0fa3c2b43f67bd54a9d6a7a6da9593]
+
+	convert boost::scoped_ptr to std::unique_ptr
+
+
+2016-12-28  David Tardon  <dtardon@redhat.com>  [815ec4655ca4919e4cd68950b7714cc5599bc145]
+
+	drop duplicate decl.
+
+
+2016-12-28  David Tardon  <dtardon@redhat.com>  [73e47757adef27312e12f307e82a3212f45c882a]
+
+	convert boost::shared_ptr to std::shared_ptr
+
+
+2016-12-28  David Tardon  <dtardon@redhat.com>  [7521d142093158673823a1c9291d5b8134f56785]
+
+	add tags files to .gitignore
+
+
+2016-12-28  David Tardon  <dtardon@redhat.com>  [ae0fcb59628726cc38026683e336ba01c598884e]
+
+	replace manual def. of int types by boost
+
+
+2016-12-28  David Tardon  <dtardon@redhat.com>  [5cf4bf96733800bda78e1354a0056d27841f1b45]
+
+	drop verbose debug
+
+
+2016-12-28  David Tardon  <dtardon@redhat.com>  [cc61dc6c9f0a3e3cbcf6b0e457b78b08ae4eb96e]
+
+	move check for __attribute__((format)) to configure
+
+
+2016-12-28  David Tardon  <dtardon@redhat.com>  [eacd6d8c9a22c6f9a9ab68a70b4e52336088d62a]
+
+	switch to C++11
+
+
+2016-12-28  David Tardon  <dtardon@redhat.com>  [d5654f224a0fb37b628de5a4c21d7e2fbb531902]
+
+	fix for change in libcss API
+
+
+2016-12-28  David Tardon  <dtardon@redhat.com>  [223288d0e78592c905c7ef6c05c2d5cb70f9e20a]
+
+	drop test that violates Unicode tr#35
+
+
+2016-12-26  David Tardon  <dtardon@redhat.com>  [58d0f34fa13d46c2b04727669912af960f1cd1eb]
+
+	FB2: fix recognition of notes
+
+	The "link" text can contain subelements, not only a simple text.
+
+2016-12-26  David Tardon  <dtardon@redhat.com>  [5585fd8504a256a5a74b21e2517e7e85b3a5490a]
+
+	FB2: output <code> in monospace font
+
+
+2016-12-26  David Tardon  <dtardon@redhat.com>  [f87e9465b07f6c68afd12e0fe3d8b507c85b9878]
+
+	FB2: output sub-/superscript
+
+
+2016-12-20  eroen  <eroen@occam.eroen.eu>  [2a30bbd1f5a0e79c4834e59ce961d873731f6adc]
+
+	Check for librevenge-stream if tests are enabled
+
+	X-Gentoo-Bug: 603098
+	X-Gentoo-Bug-URL: https://bugs.gentoo.org/show_bug.cgi?id=603098
+
+2016-07-03  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [784c5168d1a62618e53619fd0a979363d596775a]
+
+	Disable werror by default since gperf code will not build with gcc 6
+
+
+2016-03-27  David Tardon  <dtardon@redhat.com>  [929a74e2572359044e148cd27c4fb38f6d134bfb]
+
+	drop unused variable
+
+
+2016-03-27  David Tardon  <dtardon@redhat.com>  [5c60ff915f9b78de548afcece657f250e9036c88]
+
+	fb2: use footnote mark
+
+
+2016-03-27  David Tardon  <dtardon@redhat.com>  [1c228c2f1305f82468e31407d87ad662b3fdb3e3]
+
+	fb2: devirtualize handling of notes/bitmaps
+
+
+2016-03-26  David Tardon  <dtardon@redhat.com>  [73117c1192aa6d5bacc7c0a5fe1ad216e8ee4f97]
+
+	remove unnecessary wrapper class
+
+
+2016-03-26  David Tardon  <dtardon@redhat.com>  [60f580ffc8c02a1f5d1dfdf8b0a4c2b3b65b6802]
+
+	drop unneeded forward decls.
+
+
+2016-02-23  David Tardon  <dtardon@redhat.com>  [88601c093601ffe18c2e197bcecd872a2766d56b]
+
+	fix enablement of experimental features
+
+
+2016-02-16  David Tardon  <dtardon@redhat.com>  [7035fde77f3799667a28d3331b8ffbd86be5487a]
+
+	add liblangtag to requires
+
+
+2016-02-16  David Tardon  <dtardon@redhat.com>  [47707a4e806052e576f79f2b62fd5cae2a3d317b]
+
+	librevenge-stream is not required
+
+
+2016-02-03  David Tardon  <dtardon@redhat.com>  [9d7017707c6d80314c1e4bc8f9712e404fa32a0d]
+
+	tests do not need separate header files
+
+
+2016-02-03  David Tardon  <dtardon@redhat.com>  [504985093f1e535d7fec6fac126e6a2bf0494a46]
+
+	keep the file lists sorted
+
+
+2016-02-03  David Tardon  <dtardon@redhat.com>  [84064e4bcfff54d3d18e0eb20a48247a67f458c0]
+
+	rename sources for EPub parser
+
+
+2016-02-03  David Tardon  <dtardon@redhat.com>  [853902dd6fc7a39407d1344fc5d0f89440e0a0d2]
+
+	rename sources for FictionBook 3 parser
+
+
+2016-02-03  David Tardon  <dtardon@redhat.com>  [2b6900bbab18aa124441b8a14f8e8b8a9f8716fe]
+
+	rename sources for FictionBook 2 parser
+
+
+2016-02-03  David Tardon  <dtardon@redhat.com>  [e0e9e8dc41cdc5e12322a308d42b671745f2d772]
+
+	rename sources for MS HTML Help parser
+
+
+2016-02-03  David Tardon  <dtardon@redhat.com>  [6aac8559eed612b354ffee29cec4cbbb95bc9a0d]
+
+	rename sources for QiOO parser
+
+
+2016-02-03  David Tardon  <dtardon@redhat.com>  [de52f063966d810c045a1a179e1b41fb7650c966]
+
+	rename sources for BBeB parser
+
+
+2016-02-03  David Tardon  <dtardon@redhat.com>  [c756f3d38f021f759d68d73affa2cbcd2d6b358f]
+
+	rename sources for Open eBook parser
+
+
+2016-02-03  David Tardon  <dtardon@redhat.com>  [273dc09eddb3bfd64ec40eb8b4df008be9edbc16]
+
+	rename sources for Rocket eBook parser
+
+
+2016-02-03  David Tardon  <dtardon@redhat.com>  [f862261c2daf6c6e351d6b8c977610f5441c0981]
+
+	drop the source prefix hints
+
+
+2016-02-03  David Tardon  <dtardon@redhat.com>  [58724004b5784f4e36a2d688d669407d386f94d7]
+
+	rename sources for MobiPocket parser
+
+
+2016-02-03  David Tardon  <dtardon@redhat.com>  [746590f6e19349c6b5a48f55d100fc24d5633b98]
+
+	rename sources for SoftBook parser
+
+
+2016-02-03  David Tardon  <dtardon@redhat.com>  [69e5336fa63034829c6bc259552ee1eb023bbdb6]
+
+	rename sources for generic Palm format parser
+
+
+2016-02-03  David Tardon  <dtardon@redhat.com>  [b28be348c0ace2120592db83e1a636cce7f7bad1]
+
+	rename sources for TealDoc parser
+
+
+2016-02-03  David Tardon  <dtardon@redhat.com>  [4edfc5c4bf825d29eef7800fae8f1381674804f7]
+
+	rename sources for PeanutPress parser
+
+
+2016-02-03  David Tardon  <dtardon@redhat.com>  [434f9694ecd130bd80c5a388900671582742f03e]
+
+	rename sources for PalmDoc parser
+
+
+2016-02-03  David Tardon  <dtardon@redhat.com>  [c27ef619f780cac609bee829f2694224779f412d]
+
+	rename sources for Plucker parser
+
+
+2016-02-03  David Tardon  <dtardon@redhat.com>  [f0910c6171527a5d5efcf65fb7704246ef99230a]
+
+	these deps are auto-generated by gcc
+
+
+2016-02-03  David Tardon  <dtardon@redhat.com>  [419b386b45431f7de6999e04541480fbe319362f]
+
+	prepare for FictionBook 3 support
+
+
+2016-02-02  David Tardon  <dtardon@redhat.com>  [d5248959a0e22c635be6e740d0614729de98d69a]
+
+	drop superfluous ()
+
+
+2016-02-02  David Tardon  <dtardon@redhat.com>  [92f80977bc5357a859d8a76e3bc63ff1fb657a77]
+
+	allow to interrupt the parser
+
+	This can be used for format detection.
+
+2016-02-02  David Tardon  <dtardon@redhat.com>  [131eb61f5b8bef94445642a495c410ed40fd8c5b]
+
+	yet another attempt at generic XML parser
+
+
+2016-02-02  David Tardon  <dtardon@redhat.com>  [a2b1e69b81a1566d1fa22e08363c19380e23c546]
+
+	rename
+
+
+2015-12-29  David Tardon  <dtardon@redhat.com>  [d6bfe49a6c9c77f59428518a3242eac6f6ed2d25]
+
+	there is no BUILD_EXTRA_DIST
+
+
+2015-12-29  David Tardon  <dtardon@redhat.com>  [64b428e50db608367e008007663949becfff164c]
+
+	recent clang chokes on 'register' keyword
+
+
+2015-12-26  David Tardon  <dtardon@redhat.com>  [f290c1938d70f42625fc4d2f46bff8906a5924d6]
+
+	make --help output more help2man-friendly
+
+
+2015-12-26  David Tardon  <dtardon@redhat.com>  [06b742e150c4e292baef8e042908422034fddb9e]
+
+	simplify installation of headers
+
+
+2015-12-26  David Tardon  <dtardon@redhat.com>  [6bc65d08d008aac4476e7282af796fb2a42d89a3]
+
+	use __attribute__((format)) for clang too
+
+
+2015-12-26  David Tardon  <dtardon@redhat.com>  [f9647f5edebab3a44099dd0cb41f77dc31a66a05]
+
+	mention liblangtag in dependency list
+
+
+2015-12-24  David Tardon  <dtardon@redhat.com>  [9eeda94330648d0a6e712f0266edd62dc7b61aab]
+
+	tdf#94162 set margins to 0
+
+
+2015-12-24  David Tardon  <dtardon@redhat.com>  [a4b2edd5f5bb71894688a48d9200bcdc143dfb93]
+
+	drop TODO
+
+
+2015-12-24  David Tardon  <dtardon@redhat.com>  [234fe77eec6ae7f53b360b9b0a8a47d4efd9c37e]
+
+	add test for language manager
+
+
+2015-12-24  David Tardon  <dtardon@redhat.com>  [d652b720b3c9e650c9d48337b23c4782f3a262ac]
+
+	refactor language manager
+
+
+2015-12-24  David Tardon  <dtardon@redhat.com>  [8994e3beb3b82d59d510628ff9ef5f1172a03dea]
+
+	drop unused member
+
+
+2015-08-30  David Tardon  <dtardon@redhat.com>  [b903d0dc91f482b348e5840e5a1df599ebd5e6f9]
+
+	fix build with boost 1.59
+
+
+2015-08-27  David Tardon  <dtardon@redhat.com>  [316f52a8c1302758fb64dd180048c55fe88e7673]
+
+	name entry does not have to be 0-terminated
+
+
+2015-08-04  David Tardon  <dtardon@redhat.com>  [5074b6d8c4846abab51448a2a86136a44d9f1180]
+
+	add TODO
+
+
+2015-08-04  David Tardon  <dtardon@redhat.com>  [2edbf3bd5ff7e5c8d1075821d3aecd991a4b5ac8]
+
+	afl: avoid unsigned underflow
+
+
+2015-08-04  David Tardon  <dtardon@redhat.com>  [4b61ec51d0af39885dccef45715a55b635b3f791]
+
+	astyle
+
+
+2015-08-04  David Tardon  <dtardon@redhat.com>  [c6a420ee616ea5b2d151e403e821b86748753505]
+
+	fix more access to read data after next readBytes()
+
+
+2015-08-04  David Tardon  <dtardon@redhat.com>  [ecaedc094c02f19140b4c41580ea8edfca1e7478]
+
+	fix more access to read data after next readBytes()
+
+
+2015-08-04  David Tardon  <dtardon@redhat.com>  [9139431375f129cc174d1e77bb390b5a5808f87a]
+
+	fix more access to read data after next readBytes()
+
+
+2015-08-04  David Tardon  <dtardon@redhat.com>  [91e8f39f3e40f7dc9cac07d72ca3ce9354fdeaea]
+
+	fix more access to read data after next readBytes()
+
+
+2015-08-04  David Tardon  <dtardon@redhat.com>  [e131509d29ec2bbb47edc2750c22ba2e5cc7c62c]
+
+	fix more access to read data after next readBytes()
+
+
+2015-08-04  David Tardon  <dtardon@redhat.com>  [a105bf32a1ab07319c7887609e0e170aec6c06ba]
+
+	afl: avoid use-after-free
+
+	readNBytes returns a ptr into an internal buffer. It might be
+	invalidated by the next read.
+
+2015-06-17  David Tardon  <dtardon@redhat.com>  [25f64c7db26fdfcfc37b24ef502aa56659da5e9e]
+
+	fb2: improve output of language
+
+
+2015-06-16  David Tardon  <dtardon@redhat.com>  [b53666ea998be3987d5194b7dc7bbc465f67f806]
+
+	astyle
+
+
+2015-06-16  David Tardon  <dtardon@redhat.com>  [f95ac9666187822c0059038bc91cdb87e1d22863]
+
+	add make astyle target
+
+
+2015-06-16  David Tardon  <dtardon@redhat.com>  [610c5d9463c9574e9fcd1c2a9655a011d0a3ac86]
+
+	pdb: guess encoding from title if there is no text
+
+
+2015-03-12  David Tardon  <dtardon@redhat.com>  [748af66b6a251a64dd64ab8efca25c6ca319c83b]
+
+	WaE: std::string::size() returns long unsigned int
+
+
+2015-03-12  David Tardon  <dtardon@redhat.com>  [db12bc8f92adc8d6555ead0591ee95db2817bf13]
+
+	debugPrint only needs to be defined in debug mode
+
+
+2015-03-12  David Tardon  <dtardon@redhat.com>  [a7e27b6dd9d8401ba3528d6e4468aa4e382b3381]
+
+	only use __attribute__ for gcc
+
+
+2015-03-12  David Tardon  <dtardon@redhat.com>  [177e988614e54960623c334b8845ebd0882146cc]
+
+	var. args start at arg 2
+
+
+2015-02-02  David Tardon  <dtardon@redhat.com>  [0cde5e0c7783f52a7b702a9cb69d0bc61bf4e520]
+
+	remove bashism
+
+
+2015-01-12  David Tardon  <dtardon@redhat.com>  [584c9bcfed7295e5e0a9d5caafb32a5020b74300]
+
+	lrf: compute color interpolation coeff. correctly
+
+
+2015-01-12  Stephan Bergmann  <sbergman@redhat.com>  [9d01179d3ba80afcc2b2931dbae1b83bddcacdfc]
+
+	Fix alpha computation (-fsanitize=undefined)
+
+
+2015-01-05  osnola  <alonso@loria.fr>  [2ba6ed2f305cc6b30c02dd146802de60162547a0]
+
+	Correct some compiler's warnings...
+
+
+2015-01-05  David Tardon  <dtardon@redhat.com>  [643e749531b1c0492cd1a44a9af0060e9a3ebc42]
+
+	WaE: unused functions
+
+
+2015-01-05  David Tardon  <dtardon@redhat.com>  [3b6801200d76b90d8f05f3c49ec10cffd6054931]
+
+	Revert "WaE: unused variable"
+
+	Do not over-complicate this.
+
+	This reverts commit cf051b17d3c5d851adc6eb8977084ff04d764b54.
+
+2015-01-05  David Tardon  <dtardon@redhat.com>  [37dab447d2db55a1566f82b0d4867f18d20fab57]
+
+	WaE: unused functions
+
+
+2015-01-05  David Tardon  <dtardon@redhat.com>  [cf051b17d3c5d851adc6eb8977084ff04d764b54]
+
+	WaE: unused variable
+
+
+2015-01-05  David Tardon  <dtardon@redhat.com>  [f8e911b953f9af3b00d0ba5a226d34796ce35b65]
+
+	WaE: unused function
+
+
+2015-01-05  David Tardon  <dtardon@redhat.com>  [b729f7110d45f98f2698bca6aeb03d4ee71cf5ce]
+
+	WaE: unused variable
+
+
+2015-01-04  David Tardon  <dtardon@redhat.com>  [bd6cd524ac72f872ce7dab52d9c427557cf4eb77]
+
+	add more TODO items
+
+
+2015-01-04  David Tardon  <dtardon@redhat.com>  [2c51ba8e83f3752fc6d3fbac0369d68432f7085a]
+
+	remove some extra vert. space from TODO
+
+
+2015-01-04  David Tardon  <dtardon@redhat.com>  [387a9d675ae1d797452c01411db85c671a0b8a21]
+
+	remove useless TODO item
+
+
+2015-01-04  David Tardon  <dtardon@redhat.com>  [362e2731ecd6c088caa4bbdba021fe60e964803f]
+
+	lrf: add some TODO items
+
+
+2015-01-04  David Tardon  <dtardon@redhat.com>  [c654cf2a36033f26d116e2ab3a330045649124ad]
+
+	prepare for a release
+
+
+2015-01-04  David Tardon  <dtardon@redhat.com>  [76b7d0987b03f235168357a06932e598d96b2d14]
+
+	add LRF to supported formats
+
+
+2015-01-04  David Tardon  <dtardon@redhat.com>  [c8ab061ca0cd39a93b44ec6d4ca19c90b8610089]
+
+	fb2: really handle images
+
+
+2015-01-04  David Tardon  <dtardon@redhat.com>  [fe0c235fb7b371159a72f963f0802ac408848581]
+
+	lrf: paragraphs are justified by default
+
+
+2015-01-04  David Tardon  <dtardon@redhat.com>  [055d13500ac00fdd512db52b2238ac3e8380d396]
+
+	lrf: reconstruct headings from ToC
+
+
+2015-01-04  David Tardon  <dtardon@redhat.com>  [9e77bfd79455b2f8637daa1d701abefa4ae9d2fe]
+
+	lrf: fix skipping of Object ID list tags
+
+
+2015-01-04  David Tardon  <dtardon@redhat.com>  [fc1c1893e5d1978f4e5e081b172da1988d4f317c]
+
+	lrf: Plot tag has a fixed size
+
+
+2015-01-04  David Tardon  <dtardon@redhat.com>  [0ae49cd7800adef07cb849bfcee24d1b15f17904]
+
+	lrf: parse page margins
+
+
+2015-01-04  David Tardon  <dtardon@redhat.com>  [4187062b4c51c01f21faf02fc78f074a59e0524d]
+
+	lrf: fix tag name
+
+
+2015-01-04  David Tardon  <dtardon@redhat.com>  [9ea1700c48db9cc0683d08b56f5fccc1480d20af]
+
+	lrf: parse top margin of a block
+
+
+2015-01-04  David Tardon  <dtardon@redhat.com>  [614bc724f8102ce7296627c0d578d0145ffc01b2]
+
+	lrf: really handle images
+
+
+2015-01-04  David Tardon  <dtardon@redhat.com>  [21405f4a701f1b0262d05f98ae48d65a659c6a78]
+
+	lrf: ignore image crop
+
+
+2015-01-04  David Tardon  <dtardon@redhat.com>  [d2d1baf6dff4f38d6a9a0eacc909757b8f48f370]
+
+	lrf: handle line height
+
+
+2015-01-04  David Tardon  <dtardon@redhat.com>  [58652c88eb84b27ea28e6d4a7648aa0551e903f4]
+
+	lrf: we still have to skip tags unhandled in some contexts
+
+
+2015-01-04  David Tardon  <dtardon@redhat.com>  [ba6ce9a1b58116323414995d8eacd460a872c706]
+
+	lrf: use the same base font size for sub/superscripts
+
+	Otherwise the text is too small and unreadable after a conversion to
+	ODF.
+
+2015-01-04  David Tardon  <dtardon@redhat.com>  [9bfa2ddb3cac9158d46f64efb9f8775e2579e93a]
+
+	lrf: substitute default fonts for something usable
+
+
+2015-01-04  David Tardon  <dtardon@redhat.com>  [8f17169c775d446275503c33998f46a3f98fae34]
+
+	do not insert trailing 0 after converted bytes
+
+	It makes it part of the string if the conversion is done using
+	EBOOKUTF8Stream.
+
+2015-01-03  David Tardon  <dtardon@redhat.com>  [b5749f908fc017505dfcf6e2fb4f52872365a100]
+
+	lrf: handle colors
+
+	Of course, there remains a question whether I should bother at all... No
+	file I have ever encountered used colors and all devices that supported
+	this format natively are B&W.
+
+2015-01-03  David Tardon  <dtardon@redhat.com>  [8dc5387ff674d922eab6e1e704e32a9c5163d620]
+
+	lrf: interpret font sizes
+
+
+2015-01-03  David Tardon  <dtardon@redhat.com>  [34076ac59dec358fb77a6190b8a99fb524a9620c]
+
+	lrf: set 0 page margins
+
+
+2015-01-03  David Tardon  <dtardon@redhat.com>  [ff844717d75b8b014911455d20a93b1df4edfd96]
+
+	lrf: start using dpi to convert sizes
+
+
+2015-01-03  David Tardon  <dtardon@redhat.com>  [e43ff67f305aa3493ae01c54a38da92649310463]
+
+	lrf: allow GIF thumbnail too
+
+
+2015-01-03  David Tardon  <dtardon@redhat.com>  [dcdb3a47021a19a296ed8e07b873a9e0469731dd]
+
+	lrf: prepare to handle dimensions correctly
+
+
+2015-01-03  David Tardon  <dtardon@redhat.com>  [cc93dff797748a0f2524aa74166f39cc87597fd8]
+
+	i do not even remember what this should mean
+
+
+2015-01-01  David Tardon  <dtardon@redhat.com>  [a78408ff9e9e5067fd711230fb35871bb63e199e]
+
+	lrf: parse images
+
+
+2015-01-01  David Tardon  <dtardon@redhat.com>  [924df08341e3e715e1955399d78ab98f186ec454]
+
+	lrf: handle missing End P tag
+
+	This can happen if the stream cannot be properly parsed, e.g., because
+	there is an unknown variable-length tag present.
+
+2015-01-01  David Tardon  <dtardon@redhat.com>  [217a9d1d15f4df51721c77191bdefc35c7c9d75a]
+
+	add LRF prefix
+
+
+2015-01-01  David Tardon  <dtardon@redhat.com>  [4171c890338c22d4269031d570fa19b77d4e7512]
+
+	lrf: handle explicit line break
+
+
+2015-01-01  David Tardon  <dtardon@redhat.com>  [a61ecc928b84f3f74e1283ef3a8276c5cbd9f1c3]
+
+	lrf: parse paragraph alignment
+
+
+2015-01-01  David Tardon  <dtardon@redhat.com>  [15d529c6422d2c474b41c00cc95fec32bf241690]
+
+	lrf: fix merging of on/off attrs
+
+
+2015-01-01  David Tardon  <dtardon@redhat.com>  [52012aaa6f6c7e83916646f458ee3be1c8bea49f]
+
+	lrf: handle sub/superscript
+
+
+2015-01-01  David Tardon  <dtardon@redhat.com>  [417d8ab614d1ed577e2b76b5232f7f7652020bcf]
+
+	lrf: these attrs are simply on/off
+
+
+2015-01-01  David Tardon  <dtardon@redhat.com>  [f9bb9f0f7114b151ba9daacea226b9cb6b540266]
+
+	lrf: parse underline/overline
+
+
+2015-01-01  David Tardon  <dtardon@redhat.com>  [1ec2afb482242740506abdea0b793c44b0fcad80]
+
+	fix handling of font weight
+
+
+2015-01-01  David Tardon  <dtardon@redhat.com>  [2e2b9b087961a21cef7e9b2680a5d3710d2db211]
+
+	lrf: fix font size
+
+
+2015-01-01  David Tardon  <dtardon@redhat.com>  [c05569179413b2550984c8f1c61a27942fd76adb]
+
+	lrf: font face name is UTF-16 too
+
+
+2015-01-01  David Tardon  <dtardon@redhat.com>  [55805cadfdf9bb0e1e6d1358428904229e06a6c0]
+
+	avoid extra copy
+
+
+2015-01-01  David Tardon  <dtardon@redhat.com>  [597a0c01488f9dced21f3cbbe6b5e0192467ac15]
+
+	lrf: extract string reading into a function
+
+
+2014-12-31  David Tardon  <dtardon@redhat.com>  [466ce314dd2bb09ecd338d763980d72447ef6214]
+
+	lrf: font size seems to be in %
+
+
+2014-12-31  David Tardon  <dtardon@redhat.com>  [44d18932469805cb06edef719e8d0b0ec3871e0e]
+
+	check the text stream before using it
+
+
+2014-12-31  David Tardon  <dtardon@redhat.com>  [23c901b61dcbb8ad23d50ee211962fe50260e2ba]
+
+	check if charset detection succeeded
+
+
+2014-12-31  David Tardon  <dtardon@redhat.com>  [85b66656e0cfa2076c4144717fdf791714176f32]
+
+	check both status and match
+
+	It seems ucsdet_detect can return OK status and NULL match. Observed
+	with ICU 50.1 and a mangled text string, containing \003 character.
+
+2014-12-31  David Tardon  <dtardon@redhat.com>  [2da615f370013b92258027ee65698e39c994545c]
+
+	check we really got a record before using it
+
+
+2014-12-31  David Tardon  <dtardon@redhat.com>  [ec7bf9daed73742b66abbdf8c36de07d5b7d6e31]
+
+	these can't be used without a valid stream
+
+
+2014-12-31  David Tardon  <dtardon@redhat.com>  [4143665fb31af7d9763f3d034c15ce7e039b0e02]
+
+	make sure we really seeked to the wanted position
+
+
+2014-12-31  David Tardon  <dtardon@redhat.com>  [c97f26d4d2253e1bc00613e1c53eb6c356e84cf5]
+
+	check end pos of stream view too
+
+
+2014-12-31  David Tardon  <dtardon@redhat.com>  [0d1272bc29d4646652f25f9d8b1915bca7769c4d]
+
+	rename class
+
+
+2014-12-31  David Tardon  <dtardon@redhat.com>  [805107f29b36c587805565ccd151b9c6692f0394]
+
+	disable more assertions based on input data
+
+
+2014-12-31  David Tardon  <dtardon@redhat.com>  [eb9ea8f59f80b3838d1692728f0271781a3a7e59]
+
+	compressed input is more likely
+
+
+2014-12-20  David Tardon  <dtardon@redhat.com>  [b57befab84fa6704f6e8581a64e86d5beea0b99a]
+
+	afl: turn assert into runtime warning
+
+
+2014-12-20  David Tardon  <dtardon@redhat.com>  [a6527df36ed512c7abd9e0010ee2b27b64e2bd88]
+
+	afl: do not allow to create slice with begin after end
+
+
+2014-12-20  David Tardon  <dtardon@redhat.com>  [d5e530e67a1f158855c34f7245a1c72073280c5a]
+
+	avoid memory leak
+
+
+2014-12-20  David Tardon  <dtardon@redhat.com>  [6ef14a9768b9effca1d058e7b0a6211e86bf26fe]
+
+	disable copying
+
+
+2014-12-20  David Tardon  <dtardon@redhat.com>  [4c1ff8feec8837434d76293ca8d3f81a996e953a]
+
+	afl: avoid possible null pointer dereference
+
+
+2014-12-20  David Tardon  <dtardon@redhat.com>  [165bb0b9945f79642de4b25f6f26a3698f9983a3]
+
+	quick build fix
+
+
+2014-12-07  osnola  <alonso@loria.fr>  [7b0ab4bd4ac09aca7a25ede98d4c2c4d75c7ad85]
+
+	silence warnings
+
+
+2014-11-30  David Tardon  <dtardon@redhat.com>  [c748ae441bf88f65a3b72e0cee7b939acb019acf]
+
+	print debug messages to stderr
+
+	... so they do not interfere with normal output for tools like
+	ebook2odt --stdout or regression.pl.
+
+2014-11-30  David Tardon  <dtardon@redhat.com>  [d386a4ca5d4916ee76c33720984e52f179540de6]
+
+	fb2: parse style attributes at para-like elements
+
+
+2014-11-30  David Tardon  <dtardon@redhat.com>  [74bfdb8e97a37b3fad44194aa2812eb058ac6fd9]
+
+	fb2: handle text language
+
+
+2014-11-29  David Tardon  <dtardon@redhat.com>  [c68bc2d78f7a8150e73d6c70fed25a54e76f5948]
+
+	fb2: do not process headings in additional bodies
+
+
+2014-11-29  David Tardon  <dtardon@redhat.com>  [ff3f322d4e93290178a84c5eeb1e9393d02c7614]
+
+	export headings as named styles
+
+
+2014-11-29  David Tardon  <dtardon@redhat.com>  [87e0fb9f1ee43e40a4ec556f52c90405bf231b31]
+
+	BIPU support for headings in FB2
+
+
+2014-11-29  David Tardon  <dtardon@redhat.com>  [5697cc40c6ef12c08ceaf731a202510bd3eee6e7]
+
+	generalize finding substream by file extension
+
+
+2014-11-29  David Tardon  <dtardon@redhat.com>  [d61e8f8c36e8f582ce58765bf59010e2cbb31ef4]
+
+	handle fb2.zip even if the zip contains more files
+
+
+2014-11-29  David Tardon  <dtardon@redhat.com>  [4a06cff00fc97e1ff5e9a4d798ac06f5f6319c32]
+
+	apparently add_attributes can be called with 0 attributes
+
+
+2014-11-29  David Tardon  <dtardon@redhat.com>  [337b3dc8c01de847ead8f81b5053761231f449ec]
+
+	copy configuration with node too
+
+
+2014-11-29  David Tardon  <dtardon@redhat.com>  [d7c826051868230d76327a7109a5dd8b58decd30]
+
+	preset configuration on document node
+
+
+2014-11-29  David Tardon  <dtardon@redhat.com>  [5d268fdc3ac799cec05407790d6ec4a3944c767f]
+
+	add some asserts for node insertion/deletion
+
+
+2014-11-29  David Tardon  <dtardon@redhat.com>  [fee2c2793ec387963649fb5e25a52041dcdb45a6]
+
+	fix reparenting into empty node
+
+
+2014-11-29  David Tardon  <dtardon@redhat.com>  [40e81340f21038087a5c650c2f07108316142b20]
+
+	reorder functions to fix overload resolution
+
+
+2014-11-29  David Tardon  <dtardon@redhat.com>  [00167c84a7522776e45c28ea6c4ed437b44ee239]
+
+	bail out if zlib stream contains no data
+
+
+2014-11-25  David Tardon  <dtardon@redhat.com>  [323f749d10efcbebc0a81846c0c5b504a6726a9b]
+
+	handle empty base stream
+
+
+2014-11-25  David Tardon  <dtardon@redhat.com>  [d0dc91286166be46ee289d7c812a0abc388590e7]
+
+	handle empty input
+
+
+2014-11-25  David Tardon  <dtardon@redhat.com>  [3ee1747a486513099490606e66101fe4567aa88a]
+
+	never call convertBytes with empty input data
+
+
+2014-11-25  David Tardon  <dtardon@redhat.com>  [bcec8c965392b38dd93155e96decf97fd7af21cc]
+
+	add brackets
+
+
+2014-11-25  David Tardon  <dtardon@redhat.com>  [0ed8b7a66f83220a537b6b34354dbc73f255512d]
+
+	rename getLength to getRemainingLength
+
+
+2014-11-24  David Tardon  <dtardon@redhat.com>  [f2b5875804bfb9e552df409be1fcc5e51a314318]
+
+	avoid unused function warning
+
+
+2014-11-24  David Tardon  <dtardon@redhat.com>  [9fe4880fa2e394328c5699dc0c4716c00aef9fc4]
+
+	fix libraries for test
+
+
+2014-11-24  David Tardon  <dtardon@redhat.com>  [b225b2e64a63c3e11dde59325801235076b42a50]
+
+	fix build with experimental features
+
+
+2014-11-24  David Tardon  <dtardon@redhat.com>  [e5aabda3d5d0b7e3725dcdd60aced3e38403d3d0]
+
+	add compile to .gitignore
+
+
+2014-11-24  David Tardon  <dtardon@redhat.com>  [988ba4ae8eb4412ec996c5e80d55b9b88fe077e2]
+
+	only export public symbols
+
+
+2014-07-29  David Tardon  <dtardon@redhat.com>  [1744b84f15986a80f7c97bb73517478bce111c29]
+
+	check arguments
+
+
+2014-07-05  David Tardon  <dtardon@redhat.com>  [ecb751580ca8379b855c2e3935112c810e94bacc]
+
+	simplify a bit
+
+
+2014-07-05  David Tardon  <dtardon@redhat.com>  [536fc7bc90cdd8a6ab9e8f4543986352c60d494e]
+
+	scan-build: dead assignment
+
+
+2014-06-21  David Tardon  <dtardon@redhat.com>  [839a2fa4c49128deefc398932874552e11b7b2cd]
+
+	fix invalid JPEG mime type
+
+
+2014-06-02  David Tardon  <dtardon@redhat.com>  [73f2ccb0da83f81e827ed783cb2bab3cf2a966bd]
+
+	prepare for a release
+
+
+2014-05-30  David Tardon  <dtardon@redhat.com>  [6bf71c3658d386667ad573a1dba7f429329aaabb]
+
+	fix configure error
+
+
+2014-05-29  David Tardon  <dtardon@redhat.com>  [5690c18cb2de1bf4f3cce3da8a2132303a0c731f]
+
+	parse zipped FictionBook 2 files again
+
+
+2014-05-26  David Tardon  <dtardon@redhat.com>  [e9362c25b772c2cfb657b1234d8b636669a1b01b]
+
+	blind attempt to workaround MSVC bug
+
+	http://msdn.microsoft.com/en-us/library/27zksbks.aspx
+
+2014-05-26  David Tardon  <dtardon@redhat.com>  [b7e2a02864df6108047cddc0470345bec1ef0ebc]
+
+	CSS files are only for experimental mode
+
+
+2014-05-25  David Tardon  <dtardon@redhat.com>  [9972c050e3dbced3201471cd349f96b5666bdf7b]
+
+	generators and stream are only needed for tools
+
+
+2014-05-24  David Tardon  <dtardon@redhat.com>  [3aecef6474094f520b9df954865dc7ce15ed1870]
+
+	HTML-based formats are not supported yet
+
+
+2014-05-24  David Tardon  <dtardon@redhat.com>  [8d0e919363a596c57fd228370d6929ab085be900]
+
+	libcss et al. are not required for standard build
+
+
+2014-05-23  David Tardon  <dtardon@redhat.com>  [ea5166c1827653c3f89ba1392e0951eeb82820a7]
+
+	HTML check misdetects one of my TCR files...
+
+
+2014-05-23  David Tardon  <dtardon@redhat.com>  [dc10a2538ba229179d9e239f52481fcdcc4ff9c6]
+
+	palm is big endian
+
+
+2014-05-23  David Tardon  <dtardon@redhat.com>  [9ea569bda23e3ea79c7e09e338a0fa6fc88e764b]
+
+	make the unfinished stuff conditional
+
+
+2014-05-23  David Tardon  <dtardon@redhat.com>  [4db53186a958d99702da688967b3ff22bb3e002a]
+
+	update NEWS
+
+
+2014-05-23  David Tardon  <dtardon@redhat.com>  [8965a5648350b355017362dacdcadc38fa6ceb24]
+
+	adapt tests to changes in librevenge
+
+
+2014-05-23  David Tardon  <dtardon@redhat.com>  [fb954099861c1112080ac21f768fdd5c24aa0bbb]
+
+	adapt to changes in libhubbub 0.3
+
+
+2014-05-23  David Tardon  <dtardon@redhat.com>  [d6a97143757d245581dd167f734209b8feb02cca]
+
+	adapt to changes in libcss 0.3
+
+
+2014-05-23  David Tardon  <dtardon@redhat.com>  [66e26a1937123b600b0e4074db79af5b781ab348]
+
+	update to librevenge changes
+
+
+2014-05-16  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [7a7d460e2c5d3ea729b772b2d9a3f60f637bfff5]
+
+	drawConnector
+
+
+2014-04-16  David Tardon  <dtardon@redhat.com>  [e0597e1a751da31f7b47ae6fac459578db2399e8]
+
+	add more deps to .pc file
+
+
+2014-04-16  David Tardon  <dtardon@redhat.com>  [3790a45570d098a5735e21055e19ef9bfdd6e19a]
+
+	hide impl. details
+
+
+2014-04-04  David Tardon  <dtardon@redhat.com>  [bc4a401a372ad0371bbb614047a667eb556220a4]
+
+	fix destruction of document node
+
+
+2014-04-03  David Tardon  <dtardon@redhat.com>  [2c8a5097cfce311f22d90a52300e856ea84f24ed]
+
+	rename function
+
+
+2014-04-03  David Tardon  <dtardon@redhat.com>  [213d4c27408db007373f8b4bbc6970087bf35147]
+
+	fill HTML node config. correctly
+
+
+2014-04-03  David Tardon  <dtardon@redhat.com>  [187fdffed4bcb6e70787fb7f864b649dcb5ccd2d]
+
+	fix token dispatch
+
+
+2014-04-03  David Tardon  <dtardon@redhat.com>  [95accf06e0e3d2f94f364cfcc2f80dc270cde91b]
+
+	pass the tokenizer
+
+
+2014-04-03  David Tardon  <dtardon@redhat.com>  [2d4971127a56a6049ae2d29be980e54a8f65769f]
+
+	rename function
+
+
+2014-04-03  David Tardon  <dtardon@redhat.com>  [09f141b960be5e6a0744c8eb0d06de96b5fa5603]
+
+	fix assertion
+
+
+2014-01-29  David Tardon  <dtardon@redhat.com>  [9c398225911f2d03bb10e872130e65b41e3005ac]
+
+	CID#1165314 fix condition
+
+
+2014-01-29  David Tardon  <dtardon@redhat.com>  [03f4f0d5ea3e85d5dcd5fde4239f4812dbb1c4fe]
+
+	CID#1165313 fix condition
+
+
+2014-01-29  David Tardon  <dtardon@redhat.com>  [0000547f9bfbb1cf04f7f296fe627d78e403ffa3]
+
+	CID#1165315 missing break
+
+
+2014-01-29  David Tardon  <dtardon@redhat.com>  [997f57589c30d32e0900058be3fa055f946f9d16]
+
+	CID#1165321 wrong sizeof argument
+
+
+2014-01-29  David Tardon  <dtardon@redhat.com>  [3349ef9ee0a9f42e7d780477ffea14ea5fad95a4]
+
+	CID#1165320 check the right value
+
+
+2014-01-29  David Tardon  <dtardon@redhat.com>  [08f4f1d6e4b4ba0a04c18551ed1cf09e664c7561]
+
+	CID#1165319 out-of-bounds read
+
+
+2014-01-19  David Tardon  <dtardon@redhat.com>  [ea0ba69515cc048123bdb962f381081573d29d69]
+
+	fix handling of tables
+
+
+2014-01-19  David Tardon  <dtardon@redhat.com>  [375effce05bbd741416c6f234e0c7acef7561728]
+
+	add handling of lists
+
+
+2014-01-19  David Tardon  <dtardon@redhat.com>  [ff521607b6018a7214257be5f5d157de4e1a06b2]
+
+	test normal cases too :-)
+
+
+2014-01-19  David Tardon  <dtardon@redhat.com>  [80d18041b095910753f50a1f0170618d65f87ba3]
+
+	drop nonsensical assert
+
+
+2014-01-19  David Tardon  <dtardon@redhat.com>  [7c7d1bc2dd9f4877e12cbb24a02c4b3e85714b80]
+
+	improve collection of XML output
+
+
+2014-01-06  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [98c901306e956d771ac5e063b0105bd8aecd79c8]
+
+	Some default
+
+
+2014-01-02  David Tardon  <dtardon@redhat.com>  [e378f912dd23303318a816196c0c7c4bf644536d]
+
+	generalize EBOOKHTMLCollector
+
+	Its functions now take property lists instead of CSS result sets. It
+	also emits a complete document (i.e., including start/endDocument()
+	calls). There is a new class, EBOOKSubDocument, that strips these off,
+	for use in parsers whose input contains multiple HTML files.
+
+2014-01-02  David Tardon  <dtardon@redhat.com>  [87620c77725415282c7b1b114d94ee327ec12e8b]
+
+	handle caseless comparison (for HTML)
+
+
+2014-01-02  David Tardon  <dtardon@redhat.com>  [2c8246ee8b7595a0811ca2376a7df3b26f153d9b]
+
+	make CSS selector idependent on HTML
+
+
+2014-01-02  David Tardon  <dtardon@redhat.com>  [3f0b890fa62c81ff212ff3db62cf2829a76739e5]
+
+	generalize the node tree
+
+
+2014-01-01  David Tardon  <dtardon@redhat.com>  [e67435518825ce49fac136cd7d214371a0df7f7c]
+
+	html: add missing namespace defs
+
+
+2014-01-01  David Tardon  <dtardon@redhat.com>  [38c6b0010b339a31548c5d18b1ebe7b9ba3b8968]
+
+	use lwc_string in tree node impl.
+
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [e4e12cc40d9255fc4963759ec69dd529ca63f730]
+
+	add BOOST_CFLAGS
+
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [781140e982ddf8c488ed9aaf4569a1937f3f879a]
+
+	split AM_CXXFLAGS defs into separate lines
+
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [59a2634d61a9a8dc92583caade8d733efee3e75c]
+
+	add modelines to makefiles
+
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [8babe88933772bb223d5e7f8d97437ec620b4866]
+
+	drop libe-book.spec
+
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [7e9336c9554d9c810f50f2d3d61cbf35d2afa28f]
+
+	drop libe-book-zip
+
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [ab8c593077397b4114b44934c08f61d8529ccf34]
+
+	fix type/creator offset
+
+	This is what happens when I am too lazy to check the value before
+	committing...
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [86736c7a8b5342af8578cc10a475567458f1272d]
+
+	move seek to the beg. to detect. funcs
+
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [907b6ea36280a43e7c8ccbb2715ec7b7e3db4dc6]
+
+	there is no need for this seek
+
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [7ce3118c8bad8628609dc0bd13be1da72e5d84b1]
+
+	simplify the logic a bit
+
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [311f27bdd7bba6101f68c0ff75da2ce6347eda4d]
+
+	nitpick
+
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [0b8dc3271074a6119cfdd4e1ea7bba754ea50335]
+
+	drop extra break
+
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [391e33804cb1d6da15d18cd3cd6f4bbc0decfcf1]
+
+	use shared_ptr by default
+
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [e357b4fb32fbdeb878718e60cfbd2e1eb0c24d9f]
+
+	extend API to allow avoiding extra detection run
+
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [37789d87a7cd79f592c14b9662e186eceb05779a]
+
+	put the const at the right place
+
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [45ecf759f869fb3dd1a5206b63726bfdbbbaa99e]
+
+	WaE: unused function 'makeLZSSStream'
+
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [f0b90adb391981d34689f27dd81a10b0cd12c3b7]
+
+	avoid memory leak
+
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [572364ee615081b38b8d7814017f862538dc4cd5]
+
+	WaE: unused function 'release'
+
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [611161b1d0b69111d9542c2215f0e5ab2a4c8de5]
+
+	WaE: unused operators
+
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [be9601a480defdb15f550fffa868c7f4b1affcee]
+
+	WaE: unused function
+
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [314f9e57e4bd5b6b2466601f8e417f4f8db0f1ce]
+
+	WaE: private field 'm_document' is not used
+
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [b06b9bcdec2b6958b967dcbfba95d44b333e0110]
+
+	WaE: unused function
+
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [164683396e5d979f393c3cd45e693f506cb04e9a]
+
+	WaE: private field 'm_dialect' is not used
+
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [91a35abb387d55fff342143158be817b3f5e0950]
+
+	WaE: class -> struct
+
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [692e2b5430aef27c4bf903e37ad418b3567d7618]
+
+	WaE: reference to '*Token' is ambiguous
+
+	... because both namespace libebook::*Token and struct
+	libebook::(anonyomous namespace)::*Token are in the scope. Let's just
+	rename the struct. It is always included into an anonyomous namespace
+	and only into one cpp file, so the generic name is okay.
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [b640364b95764279670e4f3a46585e9f6bca0433]
+
+	oops, this is assignment...
+
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [0e59b373d713c66b0c91094a4de31fdda2905817]
+
+	WaE: unused parameter 'mode'
+
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [cfb9489757ce5385b319e5553a92f0d1cf96a745]
+
+	distribute css files
+
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [c76a8327e2720c9d7582b7fb09e096f488bc42c9]
+
+	normalize conditional name
+
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [b42dc2bbe2be7cb942ea07399a35e96a427d2c3e]
+
+	allow to build without tools
+
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [d20fb4dda4e768a24f7cb2502fbc2575403166c4]
+
+	split BUILT_SOURCES def into separate lines
+
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [ce7b3d9cc0b88c00d563bbbc40cbe157b56cc166]
+
+	split LDADD defs into separate lines
+
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [a184f0b7fd8f83dbeaae6e851a41aba5c466f14c]
+
+	drop static-tools
+
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [b9ee0186cd887e73b8758433c0bc7028012532ae]
+
+	split AM_CXXFLAGS defs into separate lines
+
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [469c878edd0f83c6bf309152bc1b1e23bf74cf82]
+
+	tools need BOOST_CFLAGS now
+
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [00a3f089d2866a31e421cddbffc52d11f09f1512]
+
+	add skeleton MobiPocket parser
+
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [ba96db87260809809fda6be082bf74bcea62588e]
+
+	handle dir. based variants of ePub and OEB too
+
+
+2013-12-31  David Tardon  <dtardon@redhat.com>  [c9d761421a77f912a2519ba5c4a6d76f6fa5f067]
+
+	fail early if file cannot be opened
+
+
+2013-12-30  David Tardon  <dtardon@redhat.com>  [ae268fc7e1f25fbc411e4262cb970dd2a7e06537]
+
+	drop unneeded includes
+
+
+2013-12-30  David Tardon  <dtardon@redhat.com>  [b8f396f6b4503de1f1fbb133ed75979052246809]
+
+	token ranges for diff. parsers mustn't overlap
+
+	Without that, token-based XML detection in detectXML() in
+	EBOOKDocument.cpp is unreliable, as it might exhibit false positives.
+
+2013-12-30  David Tardon  <dtardon@redhat.com>  [704e63b7cde277a44abb88a6cc64ef93ccf2b210]
+
+	i need the EBOOKToken symbol for other purposes
+
+
+2013-12-30  David Tardon  <dtardon@redhat.com>  [57018070ea093103114908505aef5bd9f91ba632]
+
+	drop separate libe-book-api.h
+
+
+2013-12-30  David Tardon  <dtardon@redhat.com>  [98c4eec838ebd51e0f0bfbd14def003f882faec3]
+
+	drop extraneous FB2Document class
+
+
+2013-12-30  David Tardon  <dtardon@redhat.com>  [37e4e6a3a9cedae691aa361deae36c630db89e39]
+
+	drop extraneous IMPDocument class
+
+
+2013-12-30  David Tardon  <dtardon@redhat.com>  [61c48c689394e1a84f3d18042e28a731468ded69]
+
+	drop extraneous LRFDocument class
+
+
+2013-12-30  David Tardon  <dtardon@redhat.com>  [17d21d733d40bc3798517e6d0b6045297ea7520a]
+
+	drop extraneous ZVRDocument class
+
+
+2013-12-30  David Tardon  <dtardon@redhat.com>  [c2d565a0f8bb62ddfbf0c4f9eceae3158f17fba7]
+
+	drop extraneous TCRDocument class
+
+
+2013-12-30  David Tardon  <dtardon@redhat.com>  [5b1e4a2b8be1fc46b5157e76e0c5823b42931e01]
+
+	drop extraneous QIOODocument class
+
+
+2013-12-30  David Tardon  <dtardon@redhat.com>  [aefa7bc58400e56933683bb5f78fc9796ed0bb38]
+
+	optimize format detection for palm files
+
+
+2013-12-30  David Tardon  <dtardon@redhat.com>  [89be229c9ecf5ea43feb9c9b4c9526547db5ff80]
+
+	chm: just use vector here
+
+	... because we cannot use RVNGBinaryData::getStream() anyway.
+
+2013-12-30  David Tardon  <dtardon@redhat.com>  [b47990bead76b64d668aefe629af0393b5c4cf81]
+
+	the structs passed through C API must be POD
+
+
+2013-12-30  David Tardon  <dtardon@redhat.com>  [a19b3a8e48eb5626dba4d58c3e7fbaeddedaaff8]
+
+	split into separate lines
+
+
+2013-12-30  David Tardon  <dtardon@redhat.com>  [f1d3ff09810e3b7d7b23e52b2dca04a7963212e4]
+
+	add detection for chm
+
+
+2013-12-30  David Tardon  <dtardon@redhat.com>  [0bbfaa07fdbdaf0dcdcd9bf0615589d18624c3bb]
+
+	implement CHMStream using libmspack
+
+
+2013-12-29  David Tardon  <dtardon@redhat.com>  [246a72c62c6815ce950023e3557252ea2e4dbc74]
+
+	abstract the parser call a bit
+
+
+2013-12-29  David Tardon  <dtardon@redhat.com>  [e9ac14800428ae8d233650b9560b5f68042d9c0f]
+
+	add skeleton for MS LIT parser
+
+
+2013-12-29  David Tardon  <dtardon@redhat.com>  [a015b9cf15a43f777526746f3fc6a8e432ccf28f]
+
+	add skeleton of MS HTML Help parser
+
+
+2013-12-29  David Tardon  <dtardon@redhat.com>  [616a854095db4fd732d19d2c85b13246721a8e05]
+
+	add missing ctor
+
+
+2013-12-29  David Tardon  <dtardon@redhat.com>  [22d226b76eea90df5fa7934a813ed78e84dd3c27]
+
+	fix description
+
+
+2013-12-29  David Tardon  <dtardon@redhat.com>  [0466feeba424fce024aad47f264819e24b937118]
+
+	move link to the right format
+
+
+2013-12-29  David Tardon  <dtardon@redhat.com>  [4ce659bb57027c08eddca2ef04f80818edb68e89]
+
+	add more format specs
+
+
+2013-12-29  David Tardon  <dtardon@redhat.com>  [c1d630956c0eaa42941705bb04067afd30add61e]
+
+	add more file types to the list
+
+
+2013-12-29  David Tardon  <dtardon@redhat.com>  [5f2505a9cf6502501e084038bbf7b1a0c3d797ad]
+
+	add more format specs
+
+
+2013-12-29  David Tardon  <dtardon@redhat.com>  [d12b49b6f56068947b72fab799b777de1964c63c]
+
+	update list of formats
+
+
+2013-12-29  David Tardon  <dtardon@redhat.com>  [6ec985bfaf451307833e6616599ed2cb9a347be5]
+
+	add missing breaks
+
+
+2013-12-29  David Tardon  <dtardon@redhat.com>  [a94129b23c6e2b242d35569a312fee034b49719b]
+
+	add Rocket eBook support
+
+
+2013-12-29  David Tardon  <dtardon@redhat.com>  [7dfb4e87f3c9c1b0d66f95bba9528ce2789f98a1]
+
+	rename function
+
+
+2013-12-28  David Tardon  <dtardon@redhat.com>  [8d57f0b652fdaf58511b9bb1225e2f3784f03d3e]
+
+	remove unused code
+
+
+2013-12-28  David Tardon  <dtardon@redhat.com>  [5c0ffd0e64f940a818a6695d4c441e4f1ba73443]
+
+	OPF elements in OEB do not have namespace
+
+
+2013-12-28  David Tardon  <dtardon@redhat.com>  [f4687520063621b818d172a4b634f257a6b8ec25]
+
+	nitpicking
+
+
+2013-12-28  David Tardon  <dtardon@redhat.com>  [bbb5cff04c66102454ac20af0bb69014e5f3a80e]
+
+	add support for Open eBook
+
+
+2013-12-28  David Tardon  <dtardon@redhat.com>  [df8b5fdc5da364fe6db310f51fd0bb56b20462ae]
+
+	epub: read container.xml
+
+
+2013-12-28  David Tardon  <dtardon@redhat.com>  [b35dcfea234a6760fb1c54be79b17d512240fd4c]
+
+	parse .opf
+
+
+2013-12-28  David Tardon  <dtardon@redhat.com>  [5f16fde53e222fa0ac59caa8cfa31fd088cb13d6]
+
+	add generic XML parser
+
+
+2013-12-28  David Tardon  <dtardon@redhat.com>  [3279bb53a4566fb91bde33a7b2261bacb6d9b491]
+
+	add BIPU ePub parser
+
+
+2013-12-27  David Tardon  <dtardon@redhat.com>  [644399cff30ec907ac0a6e7a24a4611060a01024]
+
+	expand test
+
+
+2013-12-27  David Tardon  <dtardon@redhat.com>  [b0b2a6eb61bb54cfdaf656ce3a3bd3d6be1c77e5]
+
+	html: make sure all callbacks are closed
+
+
+2013-12-27  David Tardon  <dtardon@redhat.com>  [52c97db2a50d761025f87a58f6219054f0ecaff8]
+
+	drop debugging stuff again
+
+
+2013-12-26  David Tardon  <dtardon@redhat.com>  [b58cfe466446984a0547de58ccb907ba6f568c76]
+
+	html: rework generation of output
+
+	The code should now correctly handle:
+	* missing calls to openParagraph or openSpan
+	* multiply nested spans
+	* (hopefully) incorrect nesting, e.g., a paragraph in a span
+
+2013-12-25  David Tardon  <dtardon@redhat.com>  [edb6d258e4dd9923e50443bd16f5e4c796a1e0ba]
+
+	html: process CSS stylesheets
+
+
+2013-12-25  David Tardon  <dtardon@redhat.com>  [8d42916a98f11b0e6c19b2f064ba529994e59bf1]
+
+	html: add CSS handling to parser
+
+
+2013-12-25  David Tardon  <dtardon@redhat.com>  [4e6617960c19b946d81ee168cb9b1b57f859ba48]
+
+	create HTML stylesheets
+
+
+2013-12-24  David Tardon  <dtardon@redhat.com>  [9d762683db8a1d4399300a60be3b992e82e6d8db]
+
+	add HTML5 elements
+
+
+2013-12-24  David Tardon  <dtardon@redhat.com>  [d6b5dceb82753213bbb8fc8e753ddee2842a02ae]
+
+	html: prepare to convert HTML attrs to CSS props
+
+
+2013-12-24  David Tardon  <dtardon@redhat.com>  [ee2278108a4f2523b01fc00b051a74359bef5c6e]
+
+	html: impl. CSS font size computation
+
+
+2013-12-24  David Tardon  <dtardon@redhat.com>  [2e267475c8ea1daa19248674649406c4124a9801]
+
+	html: impl. libcss selector callbacks
+
+
+2013-12-23  David Tardon  <dtardon@redhat.com>  [77cbac6933e3064a40c5b2079ffbb1a15ee868f3]
+
+	extract common parts into a function
+
+
+2013-12-23  David Tardon  <dtardon@redhat.com>  [ee5d9dbaff99b7a1ebc2b1420cf674bd21766325]
+
+	add distinctive prefix to callback functions
+
+
+2013-12-23  David Tardon  <dtardon@redhat.com>  [c566d70c0b304d4b59eea49d74f5a4f9ab53c3d4]
+
+	html: restore the original intent
+
+
+2013-12-23  David Tardon  <dtardon@redhat.com>  [9f6329930e072d3083eea2169937bf1550733b77]
+
+	html: add some debugging
+
+
+2013-12-23  David Tardon  <dtardon@redhat.com>  [98e1f8406f02cf6ed9cfef33d1f6f8376e3717ea]
+
+	and parse HTML too...
+
+
+2013-12-23  David Tardon  <dtardon@redhat.com>  [053bbfa59b5742032da1f6328b96184b0515fad1]
+
+	update deps list
+
+
+2013-12-23  David Tardon  <dtardon@redhat.com>  [6399d30aa0dc58aae9136be6c9e8cbeff231933f]
+
+	drop mention of LGPL from README
+
+
+2013-12-23  David Tardon  <dtardon@redhat.com>  [b5b56756dc2dec288f102a21719fc5473e2f6a93]
+
+	add HTML to supported formats list
+
+
+2013-12-23  David Tardon  <dtardon@redhat.com>  [a8513a4972ddd90c1c5145153f8405e36cb7c477]
+
+	fb2: fix over-eager detection
+
+	The previous impl. would detect any valid XML as a FictionBook v.2 file.
+
+2013-12-23  David Tardon  <dtardon@redhat.com>  [62ac4cea3fa975fb0be6f852daf15b9bb7573465]
+
+	impl. HTML/XHTML detection
+
+
+2013-12-23  David Tardon  <dtardon@redhat.com>  [4375b4c8028a26b061c157068a9c2986a25ef805]
+
+	html: propagate parser failure through exception
+
+
+2013-12-23  David Tardon  <dtardon@redhat.com>  [2b76f0bccc96d56b2cc5deab4a96e929d118ecec]
+
+	html: test node tree traversal
+
+
+2013-12-23  David Tardon  <dtardon@redhat.com>  [73dce8012644c1c220f6c80ccc0bbdce0b1dac8f]
+
+	html: handle attrs when creating elem. node
+
+
+2013-12-23  David Tardon  <dtardon@redhat.com>  [894199e87685dbd38ada041d467a6a0bedaa5382]
+
+	html: do not use pointers to parser data
+
+
+2013-12-23  David Tardon  <dtardon@redhat.com>  [c10a9a30d45b1da9d96451992aba4e45a1ca989e]
+
+	do not bother saving doctype
+
+
+2013-12-22  David Tardon  <dtardon@redhat.com>  [5891ee38553b9db547ab2f0402fc2ac8e1f4984e]
+
+	test HTML tree
+
+
+2013-12-22  David Tardon  <dtardon@redhat.com>  [5fa4c9ffcc5410381f8e22492c8b0b9fcd682e9d]
+
+	the right result is negation...
+
+
+2013-12-22  David Tardon  <dtardon@redhat.com>  [0a132a9e93c77f31819ae1874a11ddc467409fa8]
+
+	fix node insertion
+
+
+2013-12-22  David Tardon  <dtardon@redhat.com>  [818616459353de3cd5a895091497f62b10ddbd8d]
+
+	fix end()
+
+
+2013-12-22  David Tardon  <dtardon@redhat.com>  [7e81292c1b53be8d56998d45ae25f8d391ef3e35]
+
+	yet more assertions
+
+
+2013-12-22  David Tardon  <dtardon@redhat.com>  [2707878245d8972d5d43dab4e67e50b533f3799e]
+
+	assert if trying to deref. end iter
+
+
+2013-12-22  David Tardon  <dtardon@redhat.com>  [7db7347abe2b38b6c30d2724c80a9fe14254b58c]
+
+	extend interface
+
+
+2013-12-22  David Tardon  <dtardon@redhat.com>  [bbde2bdd6b0cfc906e5467e70ce7032513c08034]
+
+	simplify this
+
+
+2013-12-22  David Tardon  <dtardon@redhat.com>  [a70f2bc62de83e6474991c6d723ad60416f62b66]
+
+	html: drop encoding change test
+
+	This needs a real file.
+
+2013-12-22  David Tardon  <dtardon@redhat.com>  [2cdf3194592786b22f351f369f36a82d46c72974]
+
+	i'm an idiot...
+
+
+2013-12-22  David Tardon  <dtardon@redhat.com>  [2d8f1c77a6d5f37471d2c55766da99ab62ba748c]
+
+	fix debug build
+
+
+2013-12-22  David Tardon  <dtardon@redhat.com>  [27a6e2e2bf4175b981ef79d064c07eae0b97829c]
+
+	always require a valid type
+
+
+2013-12-22  David Tardon  <dtardon@redhat.com>  [cf21e727ba6b650f7a8165ea91794ac996f1685b]
+
+	create node unreferenced
+
+
+2013-12-22  David Tardon  <dtardon@redhat.com>  [2eaf9f443c9a1dca5a48dd859baa0498fd5bbc9d]
+
+	this is nonsense
+
+
+2013-12-22  David Tardon  <dtardon@redhat.com>  [076f31c646e18b9f5642a4f7cbdb560cff513554]
+
+	html: really init. hubbub parser
+
+
+2013-12-22  David Tardon  <dtardon@redhat.com>  [06324fe848887807a9e271acc297a328abd42266]
+
+	html: hide tree impl. details better
+
+
+2013-12-22  David Tardon  <dtardon@redhat.com>  [29c22b35a67bf4e42bbed91eb6c69c89d3a379aa]
+
+	pass null, not an empty string
+
+
+2013-12-22  David Tardon  <dtardon@redhat.com>  [dc4e8fd55ddb1b41bd38ea701ce9e3f4a9db8711]
+
+	html: test tree builder
+
+
+2013-12-22  David Tardon  <dtardon@redhat.com>  [fbf4f13b670b7c39ea9c5d7afa175245319ae52f]
+
+	register html tree test
+
+
+2013-12-22  David Tardon  <dtardon@redhat.com>  [53fec9dd54621b2c3f3bca997506d8c36a7cd0d3]
+
+	use exceptions to propagate errors from parsers
+
+
+2013-12-22  David Tardon  <dtardon@redhat.com>  [6f0dab539c417768eef3a21f08e4f5f6f9d6c095]
+
+	adapt to librevenge change
+
+
+2013-12-21  David Tardon  <dtardon@redhat.com>  [b6689c49a8c55fde987fe60b742ad3e00314f60a]
+
+	add skel. test for HTML tree builder
+
+
+2013-12-21  David Tardon  <dtardon@redhat.com>  [962b9e02f0221ab2f9201c2acf6e6d57b404a1a1]
+
+	HTML support is on the way already
+
+
+2013-12-21  David Tardon  <dtardon@redhat.com>  [adfca90a7851ed75b582304c791d74604ff9c8c9]
+
+	add HTML file parser, but not enable it yet
+
+
+2013-12-21  David Tardon  <dtardon@redhat.com>  [b30cc03e0bfa3e3b85eb98ce750cae16182f3083]
+
+	WaE: comma at end of enumerator list
+
+
+2013-12-21  David Tardon  <dtardon@redhat.com>  [c9890d32b27b36248295276d575e3ade74170392]
+
+	avoid memory leak
+
+
+2013-12-21  David Tardon  <dtardon@redhat.com>  [8dc7c01604b3f6cc23b5e9aa2cc606f76dfb5f27]
+
+	add missing dtor
+
+
+2013-12-21  David Tardon  <dtardon@redhat.com>  [cce59dd710007dcd227219f66e1d1d139335e8e3]
+
+	drop unused stuff
+
+
+2013-12-21  David Tardon  <dtardon@redhat.com>  [bbfcae2bf1814a9942228214566d5c5de7d25db5]
+
+	html: impl. parser
+
+
+2013-12-20  David Tardon  <dtardon@redhat.com>  [ebcb5b531fbdab8b06b1f442dbf3660ba59cebce]
+
+	html: impl. hubbub tree builder interface
+
+
+2013-12-20  David Tardon  <dtardon@redhat.com>  [b5d3d42708e312a62d6b6f50762fa484502a21b6]
+
+	html: impl. tokenization funcs too
+
+
+2013-12-20  David Tardon  <dtardon@redhat.com>  [79f6a52952840a5f70ea19ff4b3f4ec3e846cd20]
+
+	html: do not overcomplicate the tokenizer
+
+
+2013-12-20  David Tardon  <dtardon@redhat.com>  [6a13e43b86299bc4ea10c50a0a70308170c95df1]
+
+	html: impl. tree node
+
+
+2013-12-19  David Tardon  <dtardon@redhat.com>  [06515a73fecbbb51fd50b1698b7437a1408f997b]
+
+	integrate hubbub
+
+
+2013-12-19  David Tardon  <dtardon@redhat.com>  [ea37a5a67e7650851c8b63d3a3b6cdc1308d8ea5]
+
+	drop superfluous derived classes
+
+
+2013-12-19  David Tardon  <dtardon@redhat.com>  [5a4444cec5f1b5d7f0bc642bd032de0e3f8672f1]
+
+	html: split parsing into two phases
+
+	First produce a tree representation of the (X)HTML input, then walk
+	through that tree and produce output. This allows me to put CSS
+	computation into the parser, instead of deferring it to later. It also
+	simplifies the second stage parser, as it can now be assumed that the
+	input is balanced.
+
+2013-12-18  David Tardon  <dtardon@redhat.com>  [33ef372a8b7dba8d6500c9788e2f2c14c0950a31]
+
+	include libcss
+
+
+2013-12-18  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [d927863b68d3baaee8d83dec683245c977f4d4eb]
+
+	oops
+
+
+2013-12-18  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [4ae78d61751e2c836344bd2a9e1a0712f277814a]
+
+	Export only needed stuff on Windows
+
+
+2013-12-17  David Tardon  <dtardon@redhat.com>  [7729513bc86d1261323c05173aaad448c9ae0423]
+
+	extend EBOOKDocument interface
+
+	This is preparation for removal of the separate *Document classes.
+
+2013-12-17  David Tardon  <dtardon@redhat.com>  [5278a26ead66e9fbc8bd65eabb4eaadcf4e73fe5]
+
+	html: init. XHTML parser
+
+
+2013-12-17  David Tardon  <dtardon@redhat.com>  [d85c39d4534b1fc0527b1d04efcf60b42138a8d7]
+
+	html: handle text
+
+
+2013-12-17  David Tardon  <dtardon@redhat.com>  [fbe8da2f085a220bde0903581efb312ad84b7417]
+
+	html: add style to other attr. lists
+
+
+2013-12-17  David Tardon  <dtardon@redhat.com>  [bfe14620c916474ff7c6aa962b1858f970d7a963]
+
+	html: put element handlers into separate functions
+
+
+2013-12-16  David Tardon  <dtardon@redhat.com>  [99c2da4ff52ef5ef8ab45bbfb97bc18deb818969]
+
+	relicense to MPL 2.0
+
+	The only reason this library was dual-licensed as MPL 2.0 / LGPL 2.1+
+	was that I borrowed some source files from libwpd, namely the generators
+	and zip stream impl. But these are gone now, obsolete by the switch to
+	librevenge, so there is no reason to keep LGPL 2.1+ anymore.
+
+2013-12-16  David Tardon  <dtardon@redhat.com>  [31dfa325f16a1ee21a5d12376979855b5b7b04ed]
+
+	add missing ctor
+
+
+2013-12-16  David Tardon  <dtardon@redhat.com>  [b795a59318285cfdc7f4d1df5c19aaa8bb576da4]
+
+	html: impl. attr. merging
+
+
+2013-12-16  David Tardon  <dtardon@redhat.com>  [9c1108a77f4d0d5be2ed21f68e67df76b0f414ed]
+
+	html: parse most of character elements
+
+
+2013-12-16  David Tardon  <dtardon@redhat.com>  [aeebb93d9bc05ce902387fd1c1e408bc756175af]
+
+	html: start parsing
+
+
+2013-12-16  David Tardon  <dtardon@redhat.com>  [056704b079f1ea7a941e2f45b480f243b558c97f]
+
+	add BIPU HTML 4.0 / XHTML 1.0 parser
+
+	This is work in progress. Several important pieces still need to be
+	written .-)
+
+2013-12-12  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [8819d6a9b36a49ecc63c756e6d29d99116a8c16c]
+
+	Adapt to librevenge changes + don't set empty metadata + make startDocument the first callback ever
+
+
+2013-12-12  David Tardon  <dtardon@redhat.com>  [870e50ac7eda62cffa1a02a257e34012df663407]
+
+	document cannot be used inside footnote
+
+
+2013-12-11  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [179523699a4c3a7495c83beb6d0f00902f18b320]
+
+	Allow equal identing of functions
+
+
+2013-12-02  David Tardon  <dtardon@redhat.com>  [2ab754f6cfb8c32810adf2deb34eb9276ddfb6d9]
+
+	use RVNGBinaryData's base64 ctor
+
+
+2013-12-01  David Tardon  <dtardon@redhat.com>  [6c786050cad36f8dcf85a0b19c9e494cc840b990]
+
+	tcr: fix brain fart
+
+
+2013-12-01  David Tardon  <dtardon@redhat.com>  [d65ff6c0831217720b5c08455b6960518aeebc9e]
+
+	tcr: guess charset and convert to UTF-8
+
+
+2013-12-01  David Tardon  <dtardon@redhat.com>  [ddabee4775fd2fce9dcfe6607b09ee4eb6917b9c]
+
+	pass shared_ptr by ref.
+
+
+2013-12-01  David Tardon  <dtardon@redhat.com>  [189a0ef5ba7e4b2e4a4fb261672b6a77c3957173]
+
+	pml: convert charset
+
+
+2013-12-01  David Tardon  <dtardon@redhat.com>  [6e5b20bfc28d5b71ec729f64f2eccf377bd7c48b]
+
+	replace if-elseif chain by switch
+
+
+2013-12-01  David Tardon  <dtardon@redhat.com>  [e90b51f873e94a8cffc5e682f5f8d778e951fe14]
+
+	add missing else
+
+
+2013-12-01  David Tardon  <dtardon@redhat.com>  [75005d2f34204ccf9adf58ec906fa0a59180c616]
+
+	plkr: parse charset (not used yet)
+
+
+2013-12-01  David Tardon  <dtardon@redhat.com>  [cc1f5bb6585a61a5362eb7b5834ed5937ba364e8]
+
+	fix thinko
+
+
+2013-12-01  David Tardon  <dtardon@redhat.com>  [f380c9332926dd223be47ccb217878de1ebb2193]
+
+	drop internal zip stream
+
+
+2013-12-01  David Tardon  <dtardon@redhat.com>  [44d15cc730e89c65dc16447ff8cc9ea8f3eed391]
+
+	switch to librevenge
+
+
+2013-11-28  David Tardon  <dtardon@redhat.com>  [89752229f3ca8e5e5004630548202f36ef4de383]
+
+	add options file for astyle
+
+
+2013-11-28  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [9e75d108e1519e6e917ba0d7e87dddc0b13cda17]
+
+	fix doxygen
+
+
+2013-11-28  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [a6afa018fdeae43382aedac757d45868be0d74d8]
+
+	getFB2Token: return 0 if str is 0
+
+
+2013-11-28  Caolán McNamara  <caolanm@redhat.com>  [1a333076eabcd8fd45403d347b91d9199595d850]
+
+	Fix crash on abi2010-1.doc example
+
+
+2013-11-26  David Tardon  <dtardon@redhat.com>  [876548360b740a19748c5be5db4163a9bb78d6c0]
+
+	change astyle opts. to avoid problems with newest astyle
+
+
+2013-11-21  David Tardon  <dtardon@redhat.com>  [366b14cdeb776bf59654e1acaad31d12ca4fcaf0]
+
+	CID#1130493 unused value
+
+
+2013-11-17  David Tardon  <dtardon@redhat.com>  [f5c90a0c1ea8cf23e7bb899bfc54a772636eaaec]
+
+	tcr: fix reading of replacement table
+
+
+2013-11-17  David Tardon  <dtardon@redhat.com>  [2881c219a7d613930245828176e62d0f8aefd154]
+
+	tcr: fix format detection
+
+
+2013-11-16  David Tardon  <dtardon@redhat.com>  [5e471a34312148a1727670437fd591a1ab8c3974]
+
+	prepare for release
+
+
+2013-11-16  David Tardon  <dtardon@redhat.com>  [95b2982b54ad0ac0df80d8a77f3388a57b48eeb6]
+
+	drop nonsensical comment
+
+
+2013-11-16  David Tardon  <dtardon@redhat.com>  [6035490c8a12bc3c2c703ade9a6552ee409a9055]
+
+	fb2: improve alt. image text output
+
+
+2013-11-16  David Tardon  <dtardon@redhat.com>  [aff10960c68754a29e305b14692ec545dedc2d71]
+
+	fb2: recover if decoding of image data throws
+
+
+2013-11-16  David Tardon  <dtardon@redhat.com>  [1c421be1efb29e6fd6b0d4aabf106a0033d4ba4b]
+
+	move breaks inside blocks
+
+
+2013-11-16  David Tardon  <dtardon@redhat.com>  [ebaed4f08c58c46d0edc819b412ac1a5b018048e]
+
+	fb2: do not leak memory on error
+
+
+2013-11-16  David Tardon  <dtardon@redhat.com>  [edd75976445f38a6592cdf368798ffb220f078d2]
+
+	drop superfluous break
+
+
+2013-11-16  David Tardon  <dtardon@redhat.com>  [a33210f3d839ed7bef4cfadabbbe33b041d90946]
+
+	fb2: skip unknown elements
+
+
+2013-11-16  David Tardon  <dtardon@redhat.com>  [f622a15505fc4f901a44f5aa9fa9cffcbe771627]
+
+	do not create generators unless they are needed
+
+
+2013-11-16  David Tardon  <dtardon@redhat.com>  [ef539b843ed909db4db7bbb61297e7eb6e39c1ae]
+
+	fix return value of conv. tools
+
+
+2013-11-14  David Tardon  <dtardon@redhat.com>  [2ed5f706d19105ec4b6b10eae69b075765ce8827]
+
+	misplaced break
+
+
+2013-11-14  David Tardon  <dtardon@redhat.com>  [e2bd13eb707c92bc3deb7a0c59702f584e8d44c7]
+
+	misplaced break
+
+
+2013-11-14  David Tardon  <dtardon@redhat.com>  [3986e4f52c7b0288d2a16a3cccfb371878175628]
+
+	silence coverity
+
+
+2013-11-14  David Tardon  <dtardon@redhat.com>  [d72574ebb2512c92bc3593980cf406aa46ce8865]
+
+	make sure the object has stream
+
+
+2013-11-14  David Tardon  <dtardon@redhat.com>  [7387351a62d728d197db07762324de67cbf98c13]
+
+	set default values
+
+
+2013-11-14  David Tardon  <dtardon@redhat.com>  [449cc2faeb65eca30e70509543ad97384b096345]
+
+	check return value
+
+
+2013-11-11  David Tardon  <dtardon@redhat.com>  [6e3e03c1518962c9427f44ba0df36fd1e1620fe5]
+
+	library name fix
+
+
+2013-11-11  David Tardon  <dtardon@redhat.com>  [fa53cfb9d44912a24726de2c04111bfc3486e2a9]
+
+	install all public headers
+
+
+2013-11-10  David Tardon  <dtardon@redhat.com>  [c94ab9f6b283da218c9f3110a0d2625ac8748d40]
+
+	bump version
+
+
+2013-11-10  David Tardon  <dtardon@redhat.com>  [921b84ec71b91c1e54abfac5c749f8699dc367b0]
+
+	rename
+
+
+2013-11-10  David Tardon  <dtardon@redhat.com>  [15a9a4045c0fe88302b4acec97399c56e678d430]
+
+	list missing headers
+
+
+2013-11-10  David Tardon  <dtardon@redhat.com>  [48c74bd12881d7f26ad543841b8a3bf34434ed7d]
+
+	rename to libe-book
+
+
+2013-11-10  David Tardon  <dtardon@redhat.com>  [329275d491a8358ec8b29e492dd37243c3d5d664]
+
+	props are not needed unless there is an object to insert
+
+
+2013-11-10  David Tardon  <dtardon@redhat.com>  [b3c1a009a79e754c8cb05d06b505b272be4b7788]
+
+	workaround boost 1.47 bug
+
+
+2013-11-10  David Tardon  <dtardon@redhat.com>  [564b99fe48c76b80607cdd128b5f101da4dc0109]
+
+	close PDB doc properly
+
+
+2013-11-09  David Tardon  <dtardon@redhat.com>  [7abc588c02c8bb7ac411363549bce80f8b586df5]
+
+	fix charset conversion
+
+
+2013-11-09  David Tardon  <dtardon@redhat.com>  [1c2e8e150168d2fb9775c12384e135ef4dc9ace4]
+
+	fix broken fb2 detection
+
+
+2013-11-09  David Tardon  <dtardon@redhat.com>  [aed662342e983e75439567276fc9d8720ed27d47]
+
+	gperf is not a maint. tool
+
+
+2013-11-08  David Tardon  <dtardon@redhat.com>  [a0fed90f530dc5088966cd0f00d514285949a6d4]
+
+	this is not supported yet
+
+
+2013-11-08  David Tardon  <dtardon@redhat.com>  [1e8d52055dc14a60ec8442236635d4b7c9786c06]
+
+	Revert "imp: get rid of configurable parts of decompression"
+
+	This reverts commit a585317b14abb43d75177a83580959ea78343e6e.
+
+2013-09-26  David Tardon  <dtardon@redhat.com>  [a585317b14abb43d75177a83580959ea78343e6e]
+
+	imp: get rid of configurable parts of decompression
+
+
+2013-09-25  David Tardon  <dtardon@redhat.com>  [2927550f504d038eeb91ca906d59a807c7daafd9]
+
+	make the LZSS decompression IMP-specific
+
+	I am not interested in writing a generic LZSS decompressor, so it it
+	better to make it tailored to the settings IMP uses.
+
+2013-08-27  David Tardon  <dtardon@redhat.com>  [d75c4b31ae04794ee510407bb4177c2409d2129c]
+
+	add more potential formats to TODO
+
+
+2013-08-27  David Tardon  <dtardon@redhat.com>  [ab9e47d3b2bd827250fe74869450ae726e882dff]
+
+	add another e-book source
+
+
+2013-08-22  David Tardon  <dtardon@redhat.com>  [c6ead9f5647ab62f656ddc68f67b57289538dab6]
+
+	WaE: reference to 'EBOOKToken' is ambiguous
+
+
+2013-08-18  David Tardon  <dtardon@redhat.com>  [50b45f658cb95330d62eca010d9d5661374da7ae]
+
+	imp: process control characters
+
+
+2013-08-18  David Tardon  <dtardon@redhat.com>  [935af9f27f5f66054a09c605e245ac41d80620fd]
+
+	imp: prepare for parsing text
+
+
+2013-08-13  David Tardon  <dtardon@redhat.com>  [3d598d274ec38208da8b3845c22161676363efb8]
+
+	fb2: rename token ids and make tokens non-FB2-specific
+
+
+2013-08-12  David Tardon  <dtardon@redhat.com>  [046e4d1316b4cd66b8facddc8b0092319723f606]
+
+	remove FBToken.inc on distclean
+
+
+2013-08-11  David Tardon  <dtardon@redhat.com>  [82cad6345953518d0e3b1c4ef4e8666a3191198c]
+
+	fix path to libebook lib
+
+
+2013-08-11  David Tardon  <dtardon@redhat.com>  [15f7967fa81e2b80d2d46178cd548ba6605db448]
+
+	distribute FB2Token.gperf
+
+
+2013-08-11  David Tardon  <dtardon@redhat.com>  [5af13acc6dafc24136869b514b8c5cc4a236cc5b]
+
+	drop reference to COPYING.GPL
+
+
+2013-08-11  David Tardon  <dtardon@redhat.com>  [35ee35bf827f07784185e4e2c0698af93c9b9ef9]
+
+	imp: defer actual producing of output to another class
+
+
+2013-08-11  David Tardon  <dtardon@redhat.com>  [a4d59c94597eb639bfe59b0e7bcee75fbabefb63]
+
+	imp: interpret LZSS compression (hopefully) correctly
+
+
+2013-08-11  David Tardon  <dtardon@redhat.com>  [44fb1320245cfa80f333db13002dcf0d31f81b6a]
+
+	change interpretation of bits for big endian
+
+
+2013-08-11  David Tardon  <dtardon@redhat.com>  [827ddc1109096d7e754c6e69d6bf2b49ce707147]
+
+	imp: read (and use) uncompressed text length
+
+
+2013-08-10  David Tardon  <dtardon@redhat.com>  [1e492f9d39f6d136b7367196d7fd85319029c380]
+
+	imp: fix reading of resource indexes
+
+
+2013-08-03  David Tardon  <dtardon@redhat.com>  [f8b092e005eb60bc7b29ce51c32a1a9ae0ec62ce]
+
+	imp: file header is always 20 bytes
+
+
+2013-07-28  David Tardon  <dtardon@redhat.com>  [b6a0b535f259e39c48c1b6ced6b7db9532621193]
+
+	keep this sorted alphabetically
+
+
+2013-07-28  David Tardon  <dtardon@redhat.com>  [5f285dca0127a9a0d01a2db821411cf44f3c91c0]
+
+	add more convenience functions
+
+
+2013-07-28  David Tardon  <dtardon@redhat.com>  [7b1edacaae20b3d39eb6bd1720728c088e8bbfb3]
+
+	imp: let LZSS handle big endian input
+
+
+2013-07-28  David Tardon  <dtardon@redhat.com>  [24eeb850b8e0739dd0d5c4ca80cb9b38fedb317a]
+
+	fix LZSS decompression
+
+
+2013-07-28  David Tardon  <dtardon@redhat.com>  [488fc1a4f76b19525aee91745ae8faccbcf3c9fa]
+
+	fix reading of multibyte values from EBOOKBitStream
+
+	Now we treat the bytes as if the last byte was incomplete, not the
+	first.
+
+	Also implement reading in big endian order.
+
+2013-07-28  David Tardon  <dtardon@redhat.com>  [50ef986928e776803c607172034c0d40a5a74dbe]
+
+	add test for last byte to EBOOKBitStream
+
+	This is needed because the input to LZSS cannot be expected to be
+	aligned to bytes.
+
+2013-07-27  David Tardon  <dtardon@redhat.com>  [12a21bf2f62d8254a8fecf7d8ace7c1544f64a13]
+
+	add BIPU unit test for EBOOKLZSSStream
+
+
+2013-07-27  David Tardon  <dtardon@redhat.com>  [c8f3b5ce91c1b10e9f568b4cd2707fe90099d6cc]
+
+	imp: prepare text stream
+
+
+2013-07-27  David Tardon  <dtardon@redhat.com>  [647682717fab450c11672834932953d990d49dd7]
+
+	fix LZSS
+
+
+2013-07-27  David Tardon  <dtardon@redhat.com>  [fe7420789da2811024a6baa189934b7c21d104f5]
+
+	add unit test for EBOOKBitStream
+
+
+2013-07-27  David Tardon  <dtardon@redhat.com>  [ffacdd330e7bd2aa190a2f212d8e4a421833c4e1]
+
+	move BitStream class up to allow writing a test for it
+
+
+2013-07-27  David Tardon  <dtardon@redhat.com>  [5cdb3256968674aae9c48f50c8c7c2c90da3df22]
+
+	make stream window (slice) generally usable
+
+
+2013-07-27  David Tardon  <dtardon@redhat.com>  [20d86834148520b5fb4633ef2c84646bb3cbd995]
+
+	add read* functions that take stream as shared_ptr
+
+
+2013-07-27  David Tardon  <dtardon@redhat.com>  [aae322bf3ed9fb5b185b527b947dbefc6dfbe1bc]
+
+	implement LZSS compressed stream
+
+
+2013-07-25  David Tardon  <dtardon@redhat.com>  [57922e6809888b25caf0982b79f4f8eda33abb07]
+
+	fix empty body in non-debug build
+
+
+2013-07-25  David Tardon  <dtardon@redhat.com>  [1bfef379aed860e58e09356d9a8de94ec50449aa]
+
+	fix shared_ptr initialization
+
+
+2013-07-25  David Tardon  <dtardon@redhat.com>  [4fba304d4528e9fdb2dc317d73275dd8160fd99f]
+
+	WaE: comparison between signed and unsigned integer expressions
+
+
+2013-07-25  David Tardon  <dtardon@redhat.com>  [a2ba87979fe02cbd061672a1a02678a00ac9a40b]
+
+	WaE: private field 'm_currentListLevel' is not used
+
+
+2013-07-25  David Tardon  <dtardon@redhat.com>  [e142bb4a07abe9912d6e0a2920dac1b64ee020a1]
+
+	WaE: use of logical '&&' with constant operand
+
+
+2013-07-25  David Tardon  <dtardon@redhat.com>  [78f19bb08054bc30869d94bfdc64903553549cef]
+
+	WaE: unused function 'insert'
+
+
+2013-07-25  David Tardon  <dtardon@redhat.com>  [acdb9819cb31155b15addfdcc268677223c671a4]
+
+	WaE: class 'FB2Token' was previously declared as a struct
+
+
+2013-07-25  David Tardon  <dtardon@redhat.com>  [9c71eca0e98c5930255e09b9d382a8556d8040ae]
+
+	WaE: class 'FB2BlockFormat' was previously declared as a struct
+
+
+2013-07-21  David Tardon  <dtardon@redhat.com>  [0cdc0b40d05ccb5bcf2ac9d068ec94508f88dc20]
+
+	imp: define name of text resource
+
+
+2013-07-21  David Tardon  <dtardon@redhat.com>  [ef20099bc9a1e02b664122ee4694fe80717162aa]
+
+	imp: read file structure
+
+
+2013-07-21  David Tardon  <dtardon@redhat.com>  [d1e176e84aee65b43271e751c6e72bd84fc840db]
+
+	imp: read file header
+
+
+2013-07-20  David Tardon  <dtardon@redhat.com>  [bf18b0f8dd6b8ef87395500008763ac8ecaee27f]
+
+	update list of supported formats
+
+
+2013-07-20  David Tardon  <dtardon@redhat.com>  [64a183ef9c640daf782881fe1caeb3ac75fe3441]
+
+	add note about IMP
+
+
+2013-07-20  David Tardon  <dtardon@redhat.com>  [edbc08f3de28d5daa5fc9463659da95c24934892]
+
+	add convenience functions for reading strings
+
+
+2013-07-20  David Tardon  <dtardon@redhat.com>  [10b16a126d45af37d7b91a8747d700f8cbcc52dc]
+
+	eliminate some code duplication
+
+
+2013-07-20  David Tardon  <dtardon@redhat.com>  [69e9f2ac595876635bf56cb017a808b312c0e7fe]
+
+	define functions in namespace
+
+
+2013-07-20  David Tardon  <dtardon@redhat.com>  [befd28759dba7292fdaab6e802ef526ca3041a54]
+
+	add skeleton IMP parser
+
+
+2013-07-20  David Tardon  <dtardon@redhat.com>  [c7e03dc719b630891631985c484714aca371baa5]
+
+	lrs is gone
+
+
+2013-07-20  David Tardon  <dtardon@redhat.com>  [55141753b034a1d34163f9cb4ef51ada9214a9e9]
+
+	rename Plucker source files
+
+
+2013-07-20  David Tardon  <dtardon@redhat.com>  [f66390e602ba57c04d1a7a8b9d56bf128006834a]
+
+	AFAIK ISilo format is not documented
+
+
+2013-07-20  David Tardon  <dtardon@redhat.com>  [e909264f0116b22f82a49bdb6f5f65375cfd60d6]
+
+	TealDoc is done
+
+
+2013-07-20  David Tardon  <dtardon@redhat.com>  [e929b58594f5a77cfa2fdac43d0a901461d5cc75]
+
+	add more items to todo list
+
+
+2013-07-20  David Tardon  <dtardon@redhat.com>  [0e606a6f8c411a1c0e9913447e996873e2e79b4a]
+
+	td: improve tag parser
+
+
+2013-07-14  David Tardon  <dtardon@redhat.com>  [f4c2ba75179874527ed4d7b2d15ef7737a344a78]
+
+	add support for TealDoc
+
+	This is just PalmDoc with some HTML-like tags.
+
+2013-07-14  David Tardon  <dtardon@redhat.com>  [3ba581bc5a67c067cd4ad0b4530dda5e0b998d89]
+
+	add TODO
+
+
+2013-07-13  David Tardon  <dtardon@redhat.com>  [afafe1684f6fbd737a0478422cf29b15614bf000]
+
+	add a global detector/parser for all formats
+
+
+2013-07-13  David Tardon  <dtardon@redhat.com>  [1080e8df0e479f2245539a6ebac19a8f8726f5ce]
+
+	add support for TCR
+
+
+2013-07-13  David Tardon  <dtardon@redhat.com>  [e1597f442d9ff875c0a6fdd3833735f7c8dedb8d]
+
+	add support for ZVR
+
+	This is probably not a much known format (I only found it when I was
+	searching for information about TCR), but it is very simple and (AFAIK)
+	it is something Calibre does not know .-)
+
+2013-07-13  David Tardon  <dtardon@redhat.com>  [0a01621031b19a33b27847fa98e360702d3f6c86]
+
+	plk: fix file format recognition
+
+
+2013-07-13  David Tardon  <dtardon@redhat.com>  [2f76590c48cc01073b9a0afeb7b336f1ea0199d2]
+
+	plk: add code to process images
+
+	I have no file that contains an image, though, and the spec says that
+	images are in Palm image format, which I found nothing about.
+
+2013-07-13  David Tardon  <dtardon@redhat.com>  [76cc72b4e98920eb865919adf61cafd533317cc4]
+
+	plk: process unknown func. code 0x53
+
+
+2013-07-13  David Tardon  <dtardon@redhat.com>  [7ff2988a3d792f0f099e9a16fd35d50745b2343f]
+
+	plk: warn about unknown functions
+
+
+2013-07-13  David Tardon  <dtardon@redhat.com>  [cfcd52b0ea2c942f737cfcc1608c76ff447d4953]
+
+	plk: ignore line break at the end of a paragraph
+
+
+2013-07-13  David Tardon  <dtardon@redhat.com>  [1db677256c8eba49c642477f6da378c0933cdf13]
+
+	plk: fix splitting of text into paragraphs
+
+
+2013-07-13  David Tardon  <dtardon@redhat.com>  [166b182d19a6319abb4a1abf46206b4a3e09958d]
+
+	plk: read ignored functions completely
+
+
+2013-07-11  David Tardon  <dtardon@redhat.com>  [41c4baf44acee5de10d611d99bf045e458458eae]
+
+	fix for older boost versions
+
+
+2013-07-07  David Tardon  <dtardon@redhat.com>  [ffcb84f92d05e50c11b22fe3a499bccab31bdd38]
+
+	plk: add support for text and formatting
+
+
+2013-07-07  David Tardon  <dtardon@redhat.com>  [04e7709c20853639ff88b89b74795fd5575e1137]
+
+	the args are used now
+
+
+2013-07-07  David Tardon  <dtardon@redhat.com>  [130c28ba42c902b51412a68c8ef8a8444af32a7b]
+
+	plk: eliminate some copypasta
+
+
+2013-07-07  David Tardon  <dtardon@redhat.com>  [571e2374f32bbe853a38bc2e5d30a6e9bec78426]
+
+	add BIPU support for Plucker pdb
+
+
+2013-07-07  David Tardon  <dtardon@redhat.com>  [e838a3b45e420e297451c031de4d28544c8d0c9c]
+
+	drop LRS stub
+
+	The spec that used to be available online is not accessible anymore. It
+	is not a big loss anyway, as the format was only a source for creating
+	LRF.
+
+2013-07-06  David Tardon  <dtardon@redhat.com>  [0bef76a23b780f7f6a774cf9725ed0d0fbddb0da]
+
+	pml: read images from files created by Makebook
+
+
+2013-07-06  David Tardon  <dtardon@redhat.com>  [d7ae87d5d9c25b10707cfd87a91a5ddbca67817b]
+
+	fix seek to end
+
+
+2013-07-02  David Tardon  <dtardon@redhat.com>  [1c8f7622172c1c63302ebd89fa1ed2a979ff5b89]
+
+	really allow to use boost from nonstd. location
+
+
+2013-06-30  David Tardon  <dtardon@redhat.com>  [8b5e0dc75ef318762e971bfbeadb73c4d86f3bd0]
+
+	fix non-debug build
+
+
+2013-06-29  David Tardon  <dtardon@redhat.com>  [dd4eb0578934ee9d83d03793706c6f3916e44384]
+
+	pml: start reading Makebook header (202 bytes)
+
+
+2013-06-29  David Tardon  <dtardon@redhat.com>  [35c826da184f9eb06c2e7d8baa7fd1628976db99]
+
+	pml: add support for images
+
+
+2013-06-29  David Tardon  <dtardon@redhat.com>  [04d2762639505feafab51586d2ab9eb43ea08bf9]
+
+	pml: impl. Palm Markup Language parser
+
+
+2013-06-24  David Tardon  <dtardon@redhat.com>  [23e494426310a7f571b1b16f9b02bc2bd00ea08c]
+
+	fix mingw build
+
+
+2013-06-24  David Tardon  <dtardon@redhat.com>  [57ef5669c5f6559e6c1d934b329344a301bd3bd1]
+
+	fix non-debug build
+
+
+2013-06-23  David Tardon  <dtardon@redhat.com>  [9fdaab1b2ed03f9fca17d9ef2f7e8cbd56c4e200]
+
+	update win project files
+
+
+2013-06-23  David Tardon  <dtardon@redhat.com>  [0907880fc1d4cdb25bc4b11091c45b4dc45ac485]
+
+	lrf: delete image streams
+
+
+2013-06-23  David Tardon  <dtardon@redhat.com>  [3a6ae214dbd96eb9e9d6379e564036f64d926247]
+
+	lrf: print debug messages on reading unsupported object types
+
+
+2013-06-23  David Tardon  <dtardon@redhat.com>  [0cad7250d188c124385bdd1b00da48ba8762cd64]
+
+	lrf: drop nonexistent property
+
+
+2013-06-23  David Tardon  <dtardon@redhat.com>  [102342a630cf17f1c8c5ed23c157d51d176e972a]
+
+	lrf: fix output of color
+
+
+2013-06-23  David Tardon  <dtardon@redhat.com>  [a8c715852d394466a5c9c700c242704c6ba84a32]
+
+	lrf: process all attribute objects
+
+
+2013-06-23  David Tardon  <dtardon@redhat.com>  [255a3d737c105a5e0a065e77ca52990acdbbda0f]
+
+	lrf: handle images
+
+
+2013-06-23  David Tardon  <dtardon@redhat.com>  [7a38be9cdcaee43b9ec48b9fe27b249212264744]
+
+	lrf: assume stream flags have a discrete set of values
+
+
+2013-06-23  David Tardon  <dtardon@redhat.com>  [13f3bbb67ced32e347fe7edd23a85844588c0d16]
+
+	fix zlib stream size
+
+
+2013-06-23  David Tardon  <dtardon@redhat.com>  [1ce26b225410ac3fbd5523112e9fcb70e0522558]
+
+	lrf: handle attributes
+
+
+2013-06-23  David Tardon  <dtardon@redhat.com>  [a6d011dd368067fa4b6816543f31a1ecbeebc799]
+
+	lrf: handle text objects
+
+
+2013-06-23  David Tardon  <dtardon@redhat.com>  [932e99b4de32177a0ca8e824e500adc40090885b]
+
+	this implements WPXInputStream
+
+
+2013-06-23  David Tardon  <dtardon@redhat.com>  [7bdee19c003d1aa4f646579a531ef651ab72d1e1]
+
+	lrf: reuse code
+
+
+2013-06-23  David Tardon  <dtardon@redhat.com>  [5007809e5ce6eaf1e7c8b9d3939e327cc7064c9f]
+
+	lrf: process block objects
+
+
+2013-06-23  David Tardon  <dtardon@redhat.com>  [eb835d83ebaae5abd9f22dc04d1900d5c4604440]
+
+	lrf: add additional debug messages
+
+
+2013-06-22  David Tardon  <dtardon@redhat.com>  [809f46e6f3d21fd033278f48227cff369859dc36]
+
+	lrf: process page stream
+
+
+2013-06-22  David Tardon  <dtardon@redhat.com>  [ccb9fbe16e968777bb25921fe15e7b86ecd22148]
+
+	astyle
+
+
+2013-06-22  David Tardon  <dtardon@redhat.com>  [5bd3d7fdb53c851ff4c1e64746cb9372c5e025e1]
+
+	lrf: hand down stream of correct length
+
+
+2013-06-22  David Tardon  <dtardon@redhat.com>  [4943ace2454d500a9e51d11d27544dd9ae396317]
+
+	lrf: skip all unhandled tags
+
+	... otherwise processing of the rest of the object goes to places that
+	are better not mentioned.
+
+2013-06-22  David Tardon  <dtardon@redhat.com>  [0268653e57826c59f14b10983cdf06a1adae953d]
+
+	lrf: handle pages
+
+	The output is still a bit boring, without any text, but I am getting
+	closer :-)
+
+2013-06-22  David Tardon  <dtardon@redhat.com>  [4592fe0b08116f0fb136200aa72ac9493ed2b927]
+
+	lrf: better name for the tag
+
+
+2013-06-22  David Tardon  <dtardon@redhat.com>  [191fe65307641134cfbf7fe819e5ff3ee0fc4666]
+
+	lrf: read the correct amount of data
+
+	ebook2raw now produces a minimal (empty) document, so LRF support can be
+	called BIPU.
+
+2013-06-22  David Tardon  <dtardon@redhat.com>  [189728dfd7e28bc64802ec96d47de040595e210c]
+
+	lrf: object id precedes type
+
+
+2013-06-22  David Tardon  <dtardon@redhat.com>  [a83c0e2e7e73a02c8f1d38f61ffe5c0843bbfbf3]
+
+	lrf: throw if unknown object is referenced
+
+
+2013-06-22  David Tardon  <dtardon@redhat.com>  [d0307060510db8cad96099abde31e24b09bed005]
+
+	lrf: push metadata into the generator
+
+
+2013-06-22  David Tardon  <dtardon@redhat.com>  [ea7f5ee3efce6c7d7434301ecb623ef2aae0f919]
+
+	fix seek-from-end condition
+
+
+2013-06-22  David Tardon  <dtardon@redhat.com>  [44f62cbc5cd7d30cc376cce0216023a668270be0]
+
+	lrf: seek to start of metadata zlib stream correctly
+
+
+2013-06-22  David Tardon  <dtardon@redhat.com>  [dd2e909064abe9684a50a269fe9867e3cc7bc93d]
+
+	lrf: read complete header
+
+
+2013-06-22  David Tardon  <dtardon@redhat.com>  [a372e0f2e43a63f0dc53d6c2d23e67ccd431350c]
+
+	lrf: produce empty document
+
+
+2013-06-22  David Tardon  <dtardon@redhat.com>  [902323bf5ba428b78e8ad72ccf9181e4783d3a64]
+
+	lrf: process all object types
+
+
+2013-06-22  David Tardon  <dtardon@redhat.com>  [7efb43ac5e0826cca8ea51fbf8f9fe2ce85fcd3e]
+
+	lrf: put all attributes into one bag
+
+
+2013-06-22  David Tardon  <dtardon@redhat.com>  [f057b1bb806953744923931615d798b70c3e748f]
+
+	lrf: add skeleton code for handling metadata
+
+
+2013-06-22  David Tardon  <dtardon@redhat.com>  [1a25d278f7d32a25c9ccf97448a4ac98622a1ea4]
+
+	lrf: do not use WPXDocumentInteface in parser directly
+
+
+2013-06-22  David Tardon  <dtardon@redhat.com>  [b40edcff83d6f23ec245fbc1b7487dca1cd49d9d]
+
+	lrf: describe tag 0xf5cc
+
+
+2013-06-21  David Tardon  <dtardon@redhat.com>  [94ba00673da2b07ee8cb4836c175acbf96d4f323]
+
+	update .gitignores
+
+
+2013-06-21  David Tardon  <dtardon@redhat.com>  [4e28b7593ce18af48e327e21ef45e5c182a1a413]
+
+	WaE: comma at end of enumerator list
+
+
+2013-06-21  David Tardon  <dtardon@redhat.com>  [633359c1164faccfd8342a1da55ff57f086236fc]
+
+	fix build of FB2Token with mingw
+
+
+2013-06-20  David Tardon  <dtardon@redhat.com>  [0edf92da3f06736e50ec051c6c938ba655ff01c4]
+
+	start on lrf processor
+
+
+2013-06-20  David Tardon  <dtardon@redhat.com>  [a337cf8a685595c15be60cf7762acef288a401e8]
+
+	lrf: add some enums
+
+
+2013-06-17  David Tardon  <dtardon@redhat.com>  [87480b795f49d8a5d9af97b33fee25a2ad81e736]
+
+	update win project files
+
+
+2013-06-17  David Tardon  <dtardon@redhat.com>  [5f3422479962ec6cafaf66687c2015c9a89cb661]
+
+	tabs -> spaces in configure.ac
+
+
+2013-06-17  David Tardon  <dtardon@redhat.com>  [59a7fb3123fb6fed960ebc3f3e40b74f1642df3d]
+
+	WPX_SEEK_END is only available since libwpd 0.9.5
+
+
+2013-06-16  David Tardon  <dtardon@redhat.com>  [8b18f9d06d9fb3d48278dae85ff47ed6a8ad938c]
+
+	improve comments
+
+
+2013-06-16  David Tardon  <dtardon@redhat.com>  [fca7a86581c39baf3ee9d1d81757dc4215319575]
+
+	fix more memory leaks
+
+
+2013-06-16  David Tardon  <dtardon@redhat.com>  [218ab0c9baf61e165df37c5d6cc5b0ac7b34e0ec]
+
+	fix memory leak
+
+
+2013-06-16  David Tardon  <dtardon@redhat.com>  [bc1e2a5da17ee3be249a369bc74ecb5643aa6335]
+
+	fix memory leak
+
+
+2013-06-16  David Tardon  <dtardon@redhat.com>  [13f1e9f92ca9fee253b8e4e9de8e8efacd0b247d]
+
+	allow using boost in nonstd. location
+
+
+2013-06-16  David Tardon  <dtardon@redhat.com>  [53d7fbadfec6276f0d9884310d21c8fcf9108cc4]
+
+	don't need to link tools with icu
+
+
+2013-06-16  David Tardon  <dtardon@redhat.com>  [b0222c42f167f5ae0ac50d054947c852b32390d8]
+
+	add stream class doing char. set conversion
+
+
+2013-06-16  David Tardon  <dtardon@redhat.com>  [78914c524f794d0f07b04d1552ecae5c311ec47b]
+
+	refactor character set conversion
+
+	This will be useful at more places than PDBParser (or even PDXParser).
+
+2013-06-16  David Tardon  <dtardon@redhat.com>  [eb497fa8a9754100b48456a4f5b59c9caa411856]
+
+	add a func. for safe reading of N bytes
+
+
+2013-06-16  David Tardon  <dtardon@redhat.com>  [3b9d0a2f496a84dddfd8466678617bb431342c21]
+
+	skip uninteresting input bytes safely
+
+
+2013-06-16  David Tardon  <dtardon@redhat.com>  [0bffa4ed556d73872d89998608a2162eb01d5463]
+
+	add a helper func. for safe skipping of bytes
+
+
+2013-06-16  David Tardon  <dtardon@redhat.com>  [e4c1ef23f5078a7154acdd882e0630439aa58380]
+
+	BIPU support for BroadBand eBook (LRF)
+
+
+2013-06-16  David Tardon  <dtardon@redhat.com>  [433f3a093b3dac4cc3d92dbdc4ddf24de9b1d29f]
+
+	always rewind the stream before testing or parsing it
+
+
+2013-06-16  David Tardon  <dtardon@redhat.com>  [7097a9caa81139cc9e220d27bbae11039f3298d3]
+
+	BIPU support for eReader PDB
+
+	This prints the document text including markup (PML--Palm Markup
+	Language).
+
+2013-06-16  David Tardon  <dtardon@redhat.com>  [20045c90581a34557351ef141a673c0ca50a50d3]
+
+	simplify creation of palm file codes
+
+
+2013-06-16  David Tardon  <dtardon@redhat.com>  [a15ac32fc61d8734d5a42d21fa76094c9a15b39d]
+
+	rename this
+
+
+2013-06-16  David Tardon  <dtardon@redhat.com>  [6fb94da0d2718229a5a951436eebe391c6279e71]
+
+	add support for zTXT
+
+
+2013-06-16  David Tardon  <dtardon@redhat.com>  [8c8d5403a01a1060dab07e352a8df3a07f143399]
+
+	fix zlib stream inflation
+
+
+2013-06-15  David Tardon  <dtardon@redhat.com>  [89cfa78128f11e23b8ce3b570ee66931c9d1a811]
+
+	fb2: check if the file is XML
+
+	This avoids libxml2 errors when running ebook2* .
+
+2013-06-15  David Tardon  <dtardon@redhat.com>  [032c985e59cea110e1b66cbcf599d888d35e5be9]
+
+	impl. handling of zlib streams
+
+	The inflating code is based on makeSubstream() in WPXZipStream.cpp .
+
+2013-06-15  David Tardon  <dtardon@redhat.com>  [76106b736c03c2707c8fd9a84f89400c683db1d1]
+
+	make PDXLZ77Stream functions public
+
+
+2013-06-15  David Tardon  <dtardon@redhat.com>  [ae7d6885ca4ab39372cbb23f63f2876b9728c598]
+
+	refactor PDXLZ77Stream again
+
+	The progressive unpacking is a needless optimalization, as we are always
+	reading the whole record anyway. So just unpack everything in the
+	constructor. This also allows us to reuse the EBOOKMemoryStream
+	implementation for some functions.
+
+2013-06-15  David Tardon  <dtardon@redhat.com>  [a44dd7b5c46bdfca86ed5a4d19dcceff05fe4091]
+
+	move WPXZipStream into libebook namespace
+
+
+2013-06-15  David Tardon  <dtardon@redhat.com>  [1726a2763b651e9aeaa76b1f21344a82c691b149]
+
+	replace WPXStringStream by EBOOKMemoryStream
+
+	WPXStringStream assumes linking with libwpd-stream, which is not
+	necessarily what we want.
+
+2013-06-15  David Tardon  <dtardon@redhat.com>  [850e5726deee4dfa1d2d0626bc7594fb115e0eff]
+
+	impl. a memory stream class
+
+
+2013-06-15  David Tardon  <dtardon@redhat.com>  [0d813e7993cdfd1a36cadf0c41852e3417e290e0]
+
+	start reading zTXT
+
+
+2013-06-15  David Tardon  <dtardon@redhat.com>  [179be1917395354c37ca82b2b3ebf28854f5b5d1]
+
+	add some e-book sources
+
+
+2013-06-15  David Tardon  <dtardon@redhat.com>  [9bf3e60461195df2ad0346ca70839f002ea68552]
+
+	add online resources for more Palm file formats
+
+
+2013-06-15  David Tardon  <dtardon@redhat.com>  [f09ce9a89810ec1a7cb68dfc9c17a06c66593856]
+
+	add unit test for LZ77 decompression
+
+
+2013-06-15  David Tardon  <dtardon@redhat.com>  [7f8c18ff7cdb60338cd97ac6b4719d298e2317cc]
+
+	start a test suite
+
+
+2013-06-15  David Tardon  <dtardon@redhat.com>  [4dda1702b836e81a5312b4fbc5c62753824525b4]
+
+	refactor PDB parser
+
+	There are other formats that use Palm Database Format (and even the LZ77
+	compression). They can use the same code.
+
+2013-06-13  David Tardon  <dtardon@redhat.com>  [bb2c5ac4cd09b9c391005e4f7bf8bc7e224f5b76]
+
+	add skeleton parser for Plucker format
+
+
+2013-06-13  David Tardon  <dtardon@redhat.com>  [d860b1a987032191a4e5970489551f3db2aab446]
+
+	add skeleton parser for zTXT
+
+
+2013-06-13  David Tardon  <dtardon@redhat.com>  [7bcfc2e01bd589997270bdc913c5b0f8e2e6f637]
+
+	add skeleton parser for eReader format
+
+
+2013-06-13  David Tardon  <dtardon@redhat.com>  [5de7e70672f655b6117c0b316d5c47b6d2317600]
+
+	add skeleton parser for BroadBand eBook source
+
+
+2013-06-13  David Tardon  <dtardon@redhat.com>  [9506ff54afce1a5edcf647488da958e99cad5bdf]
+
+	add skeleton parser for BroadBand eBook
+
+
+2013-06-12  David Tardon  <dtardon@redhat.com>  [c2f287e26d2df3426935d6065fd17757d57e021e]
+
+	add link to much better description of LRF
+
+
+2013-06-09  David Tardon  <dtardon@redhat.com>  [9c6fb7b40effc37329d537ac0e2684b51fdefd26]
+
+	update README
+
+
+2013-06-09  David Tardon  <dtardon@redhat.com>  [646e1e3c168f1edf0ae4cb8929cef07214c98570]
+
+	add support for QiOO
+
+	(mobile book format for cellphones with java support)
+
+2013-06-09  David Tardon  <dtardon@redhat.com>  [39059fe9e2b4b7bb3f86106b7309fd9d250c5160]
+
+	add support for zipped fb2 files
+
+	The zip stream impl. in src/lib/WPXZipStream.{cpp,h} has been
+	shamelessly stolen from libwpd.
+
+2013-06-09  David Tardon  <dtardon@redhat.com>  [48a2836dcac3e5d9b11befcb619630ade45a70e9]
+
+	cannot use WPXString here
+
+	... because the title might not be UTF-8.
+
+2013-06-09  David Tardon  <dtardon@redhat.com>  [aaedf2ad9331cd12770354d216cf3a68770116a1]
+
+	pdb: convert text title to utf8 too
+
+
+2013-06-09  David Tardon  <dtardon@redhat.com>  [5d9de858a3ec4bf2e5a934ae808273c4609bc6e6]
+
+	add info about more file formats
+
+
+2013-06-09  David Tardon  <dtardon@redhat.com>  [78b3294db7ea6c943e3f9e0b7b7068127dfaedd7]
+
+	build just one conversion tool handling all formats
+
+
+2013-06-09  David Tardon  <dtardon@redhat.com>  [b51dcb5e3482a059b80a46e2b67e046c939a28ed]
+
+	add some developer-targeted notes
+
+
+2013-06-09  David Tardon  <dtardon@redhat.com>  [8ad841623c4c05d464118c2065c90136d9497fce]
+
+	update README
+
+
+2013-06-09  David Tardon  <dtardon@redhat.com>  [10f65ff5e7e1dfe04cb0e56671bbf073cf97f8f0]
+
+	fix license
+
+	This project has been MPL 2.0+ / LGPL 2.1+ since the beginning. I just
+	copied wrong license files in.
+
+2013-06-09  David Tardon  <dtardon@redhat.com>  [8329809086b0cfa395a3337d0813b325f0cacef1]
+
+	fb2: add support for inline images
+
+
+2013-06-09  David Tardon  <dtardon@redhat.com>  [f774835426277f92bbd1aa35ad2d83f4ae8ba7bb]
+
+	fb2: add support for images
+
+
+2013-06-09  David Tardon  <dtardon@redhat.com>  [c34ef91acc53cc3026de0fb4c72d8e8373c783fa]
+
+	fb2: we need to know the content type of a bitmap
+
+
+2013-06-09  David Tardon  <dtardon@redhat.com>  [100726fc1d9c9dba401d433e51767a5618b0c7c0]
+
+	fb2: add support for footnotes
+
+
+2013-06-09  David Tardon  <dtardon@redhat.com>  [76df0a145e98b640e2d8b70796bab037a9e5492f]
+
+	do not bother with non-copying on interface
+
+
+2013-06-09  David Tardon  <dtardon@redhat.com>  [841afb6b4516af271cbd045ef2906bac8d3747f9]
+
+	do not leak
+
+
+2013-06-09  David Tardon  <dtardon@redhat.com>  [8f2019d0c08e84508a6040b7b6fcd256b1e0d917]
+
+	astyle
+
+
+2013-06-09  David Tardon  <dtardon@redhat.com>  [af3695355a6fff9b62362de4d84d8dd75f1ee18b]
+
+	finalize FB2Content interface
+
+
+2013-06-08  David Tardon  <dtardon@redhat.com>  [e67bc344f156bf680cb868df23837b068b1a0f65]
+
+	fb2: prepare for saving parts of document content
+
+
+2013-06-08  David Tardon  <dtardon@redhat.com>  [e2cbf3d4c9acaa2bcf086b83a1977c2d4c0b0aaa]
+
+	fb2: implement parsing of <binary>
+
+	... but the data are not going to be used till the FB2ExtrasCollector
+	part is implemented as well.
+
+2013-06-08  David Tardon  <dtardon@redhat.com>  [97d74d2f66288cdd4559813a657cde2f955a0dd0]
+
+	fb2: collector API fix
+
+
+2013-06-08  David Tardon  <dtardon@redhat.com>  [0a3fe99aa3a93beef54b73e1cb50e5e5af8fae69]
+
+	fb2: process the doc. in two passes
+
+	The first pass is to gather notes and bitmaps, which are "conveniently"
+	placed at the very end, and the second pass to generate the output
+	document. The first pass processing is to be implemented.
+
+2013-06-08  David Tardon  <dtardon@redhat.com>  [309699eaa56a6aaeebfe01263ab1b4388c3d5c51]
+
+	fb2: add an extra layer between parser and generator
+
+	This allows me to process the file in two passes; the first pass
+	collecting notes and images and the second pass generating the document.
+
+2013-06-08  David Tardon  <dtardon@redhat.com>  [0f0138a2fc9a78d8c9c974d3223fe55c26832ff4]
+
+	fb2: refactor handling of formatting
+
+
+2013-06-05  David Tardon  <dtardon@redhat.com>  [19df6bbc9b98f2024311e0d176068c1b58d86262]
+
+	fix processing of table structure
+
+
+2013-06-05  David Tardon  <dtardon@redhat.com>  [c337a272dc6bd40d392280a53b6f42bc7042a045]
+
+	attrs are in no namespace by default
+
+
+2013-06-05  David Tardon  <dtardon@redhat.com>  [7119b6f7fd9e966655048276597b4714ba6ecf4c]
+
+	astyle
+
+
+2013-06-05  David Tardon  <dtardon@redhat.com>  [568ef8f791c1567ed7f70955881bb2b368629b62]
+
+	fb2: call openCell when all attrs are known
+
+
+2013-06-05  David Tardon  <dtardon@redhat.com>  [480726e1c4e7a53ad4e41cb63e07f1e8c64f0f53]
+
+	fb2: send endOfAttributes event
+
+
+2013-06-05  David Tardon  <dtardon@redhat.com>  [644fe7089e1cd8960a4ef26a01af3857c3345018]
+
+	fb2: simplify XML parser
+
+
+2013-06-02  David Tardon  <dtardon@redhat.com>  [1c2f862588168fa355a6fde36bd3a8bb8a7cde8a]
+
+	fb2: add BIPU support for tables
+
+
+2013-06-02  David Tardon  <dtardon@redhat.com>  [d81a4d57ddc77d662592c655d26c501c13310a04]
+
+	astyle
+
+
+2013-06-02  David Tardon  <dtardon@redhat.com>  [1ecd6749f0ed1a7bd45b9777f408bff26845d6f4]
+
+	fb2: put an empty para before poem
+
+
+2013-06-02  David Tardon  <dtardon@redhat.com>  [9a4107c3f186c8cd2ada4625b9ab36582c7ac882]
+
+	fb2: handle epigraph
+
+
+2013-06-02  David Tardon  <dtardon@redhat.com>  [1fe575442b539e60e4ac11b041a274941b2f37f6]
+
+	fb2: handle cite
+
+
+2013-06-02  David Tardon  <dtardon@redhat.com>  [1ab798b2fa26e9b240827772df977f8e05142850]
+
+	fb2: handle poem
+
+
+2013-06-02  David Tardon  <dtardon@redhat.com>  [00bc78add70cd022a7d7f29f0d8efb839be41378]
+
+	impl. handling of empty-line
+
+
+2013-06-02  David Tardon  <dtardon@redhat.com>  [51a7f1e3ed0394c75daa77303e80a4a2ecbb4349]
+
+	split parser into more files
+
+
+2013-06-02  David Tardon  <dtardon@redhat.com>  [7fee0b5987f121a9218b37e3997d9c2563a7ea12]
+
+	BIPU support for text
+
+
+2013-06-02  David Tardon  <dtardon@redhat.com>  [9cb2872a45bbd21ff1493a3b451ae4e66b002202]
+
+	drop unneeded include
+
+
+2013-06-02  David Tardon  <dtardon@redhat.com>  [d68d877732f011bb8440d732f848abc32eb42195]
+
+	put everything into a namespace
+
+
+2013-06-01  David Tardon  <dtardon@redhat.com>  [e412fe007ce5b8c0ef12c01bcb6d32f7f25225d2]
+
+	implement reading fb2 metadata
+
+
+2013-05-26  David Tardon  <dtardon@redhat.com>  [56cf0ffee2a5d4cadc87e79f341a406ccc4866bf]
+
+	we are leaving the element here too
+
+	The FictionBook parser is now leak-free and able to produce an (empty)
+	output document (startDocument() followed by endDocument() from fb22raw).
+	This means FictionBook support has reached the status of BIPU :-)
+
+2013-05-26  David Tardon  <dtardon@redhat.com>  [f7beda32828065a09d6805990b2a0f6c00bbb639]
+
+	only read further if there is an active context
+
+
+2013-05-26  David Tardon  <dtardon@redhat.com>  [c8028f911273699a6137de59caf9c494359a3c70]
+
+	do not leak attribute value
+
+
+2013-05-26  David Tardon  <dtardon@redhat.com>  [1a247118678952bf38a43d679da0e0bfd068e568]
+
+	close and free XML reader
+
+
+2013-05-26  David Tardon  <dtardon@redhat.com>  [e6567a05289e701344ab05e1aa6d02e0df82488e]
+
+	fix leaking parser contexts
+
+
+2013-05-26  David Tardon  <dtardon@redhat.com>  [88377aa62e1fd90a7d97b4da88b7c47beb89c4af]
+
+	avoid double delete
+
+
+2013-05-26  David Tardon  <dtardon@redhat.com>  [50235e1f34490a7b56eccd7686b92d55e5e31e35]
+
+	skip elements we do not handle yet
+
+
+2013-05-26  David Tardon  <dtardon@redhat.com>  [bb6b6995c8a18a9aae8123bcab5027e5eca21eda]
+
+	generate parser skeleton
+
+
+2013-05-26  David Tardon  <dtardon@redhat.com>  [34b5cb13fbeab8e578320fae0f7889abf5cc545d]
+
+	use document from parent context if not set
+
+
+2013-05-26  David Tardon  <dtardon@redhat.com>  [babb5b9f46a5cdabba6a24b633bc3e941bd670de]
+
+	simplify XML processing a bit
+
+	It is tiresome to have to extract the data from the reader all over the
+	place. Better to do it just once and pass around tokens.
+
+2013-05-26  David Tardon  <dtardon@redhat.com>  [d2cdd1184db9ee790c9e87f155b01303af01b3a1]
+
+	impl. processing of FictionBook structure
+
+	There are no semantic actions yet.
+
+2013-05-26  David Tardon  <dtardon@redhat.com>  [8542ae840404c99cefe61c99e7bdf5d4a691d0bd]
+
+	start FictionBook parser
+
+
+2013-05-25  David Tardon  <dtardon@redhat.com>  [608550b1e39e723739f11baf0bc43ee226048d0b]
+
+	astyle
+
+
+2013-05-25  David Tardon  <dtardon@redhat.com>  [85e8c5ad27f724af4f3d66085bb7418d5525ae49]
+
+	WaE: conversion to 'foo' from 'bar' may alter its value
+
+
+2013-05-25  David Tardon  <dtardon@redhat.com>  [b36cf2c8c307f3d31845a8f65ae77528db004c85]
+
+	WaE: conversion to 'uint16_t' from 'int' may alter its value
+
+
+2013-05-22  David Tardon  <dtardon@redhat.com>  [55700c7d74f6e8532017e0af855f0b979a84108f]
+
+	implement character set handling
+
+	Well, it is all based on guessing, because AFAICS there is no
+	identification of character set in the format. The only thing that I am
+	(almost) certain of is that the character set is always 8-bit.
+
+2013-05-22  David Tardon  <dtardon@redhat.com>  [055ef27b6e19a2369f22f4f3449cf9d4eca285b4]
+
+	fix end condition
+
+
+2013-05-20  David Tardon  <dtardon@redhat.com>  [392297557c2fc800249a769a1ed08a6d52e67b74]
+
+	create project; impl. PalmDoc Ebook (PDB) parser
+
+	Bits of this project--especially the document generators--are
+	shamelessly stolen from libwpd.

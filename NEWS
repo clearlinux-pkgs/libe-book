@@ -1,0 +1,82 @@
+libe-book 0.1.3
+
+- Fix various problems when reading broken files, found with the help of
+  american-fuzzy-lop and oss-fuzz.
+- Fix build with boost >= 1.59.
+- Set default page margins. (tdf#94162)
+- Make output of ebook2* --help more compatible with help2man.
+- Check for librevenge-stream if tests are enabled. (gentoo#603098)
+- Require C++11 for build.
+- Drop outdated MSVC project files.
+- Fix several issues found by Coverity.
+- FictionBook v.2:
+  + Use document language as default language for text.
+  + Use note title as footnote mark.
+  + Handle subscript and superscript.
+  + Output content of <code> in monospace font.
+
+libe-book 0.1.2
+
+- Check arguments of public functions. Passing NULL no longer causes
+  a crash.
+- Use symbol visibility on Linux. The library only exports the two public
+  functions now.
+- Fix handling of --enable-experimental configure option.
+- Fix various crashes and hangs when reading broken files, found with the
+  help of american-fuzzy-lop.
+- FictionBook v.2:
+  + Fix incorrect mime type for JPEG images that occurs occasionally in
+    FB2 files.
+  + Handle zipped files that contain more than one file.
+  + Add support for headings.
+  + Add support for text language.
+- Broad Band eBook:
+  + Convert dimensions and font sizes correctly. This makes the output
+    actually usable :-)
+  + Parse basic paragraph and character properties.
+  + Add initial support for images. Only Plot tag is supported, as
+    Canvas is much more complex and can contain other objects too, not
+    just a single image.
+  + Recognize GIF images too.
+  + Parse important page properties, like dimensions and margins.
+  + Substitute the default fonts embedded on the devices for Liberation
+    fonts.
+  + Try to reconstruct headings from table of contents.
+
+libe-book 0.1.1
+
+- Fix various problems when using --disable-experimental.
+- Work around MSVC bug.
+- Fix parsing of zipped FictionBook 2 files.
+
+libe-book 0.1.0
+
+- switch to librevenge
+- PeanutPress: make sure the output is UTF-8
+- TCR: make sure the output is UTF-8
+- sanitize format detection
+
+libe-book 0.0.2
+
+- install all public headers
+- fix library name in .pc file
+- fix a handful of defects found by coverity
+- fix return value of conversion tools
+- make FictionBook v.2 parser more robust
+
+libe-book 0.0.1
+
+- build fix
+
+libe-book 0.0.0
+
+- add support for PalmDoc
+- add support for FictionBook v.2
+- add support for QiOO
+- add support for zTXT
+- add support for eReader .pdb
+- add support for LRF
+- add support for Plucker .pdb
+- add support for ZVR
+- add support for TCR
+- add support for TealDoc
