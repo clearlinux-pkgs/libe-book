@@ -4,15 +4,15 @@
 #
 Name     : libe-book
 Version  : 0.1.3
-Release  : 1
+Release  : 2
 URL      : https://dev-www.libreoffice.org/src/libe-book-0.1.3.tar.xz
 Source0  : https://dev-www.libreoffice.org/src/libe-book-0.1.3.tar.xz
 Summary  : Library for parsing various reflowable ebook formats
 Group    : Development/Tools
 License  : MPL-2.0-no-copyleft-exception
-Requires: libe-book-bin
-Requires: libe-book-lib
-Requires: libe-book-license
+Requires: libe-book-bin = %{version}-%{release}
+Requires: libe-book-lib = %{version}-%{release}
+Requires: libe-book-license = %{version}-%{release}
 BuildRequires : boost-dev
 BuildRequires : doxygen
 BuildRequires : gperf
@@ -32,7 +32,7 @@ various reflowable e-book formats.
 %package bin
 Summary: bin components for the libe-book package.
 Group: Binaries
-Requires: libe-book-license
+Requires: libe-book-license = %{version}-%{release}
 
 %description bin
 bin components for the libe-book package.
@@ -41,9 +41,9 @@ bin components for the libe-book package.
 %package dev
 Summary: dev components for the libe-book package.
 Group: Development
-Requires: libe-book-lib
-Requires: libe-book-bin
-Provides: libe-book-devel
+Requires: libe-book-lib = %{version}-%{release}
+Requires: libe-book-bin = %{version}-%{release}
+Provides: libe-book-devel = %{version}-%{release}
 
 %description dev
 dev components for the libe-book package.
@@ -60,7 +60,7 @@ doc components for the libe-book package.
 %package lib
 Summary: lib components for the libe-book package.
 Group: Libraries
-Requires: libe-book-license
+Requires: libe-book-license = %{version}-%{release}
 
 %description lib
 lib components for the libe-book package.
@@ -82,7 +82,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1534628538
+export SOURCE_DATE_EPOCH=1542499960
 %configure --disable-static
 make  %{?_smp_mflags}
 
@@ -94,10 +94,10 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1534628538
+export SOURCE_DATE_EPOCH=1542499960
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/doc/libe-book
-cp COPYING %{buildroot}/usr/share/doc/libe-book/COPYING
+mkdir -p %{buildroot}/usr/share/package-licenses/libe-book
+cp COPYING %{buildroot}/usr/share/package-licenses/libe-book/COPYING
 %make_install
 
 %files
@@ -126,5 +126,5 @@ cp COPYING %{buildroot}/usr/share/doc/libe-book/COPYING
 /usr/lib64/libe-book-0.1.so.1.0.3
 
 %files license
-%defattr(-,root,root,-)
-/usr/share/doc/libe-book/COPYING
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/libe-book/COPYING
