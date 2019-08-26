@@ -4,7 +4,7 @@
 #
 Name     : libe-book
 Version  : 0.1.3
-Release  : 3
+Release  : 4
 URL      : https://dev-www.libreoffice.org/src/libe-book-0.1.3.tar.xz
 Source0  : https://dev-www.libreoffice.org/src/libe-book-0.1.3.tar.xz
 Summary  : Library for parsing various reflowable ebook formats
@@ -44,6 +44,7 @@ Group: Development
 Requires: libe-book-lib = %{version}-%{release}
 Requires: libe-book-bin = %{version}-%{release}
 Provides: libe-book-devel = %{version}-%{release}
+Requires: libe-book = %{version}-%{release}
 
 %description dev
 dev components for the libe-book package.
@@ -81,20 +82,28 @@ license components for the libe-book package.
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1542499960
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1566839714
+export GCC_IGNORE_WERROR=1
+export AR=gcc-ar
+export RANLIB=gcc-ranlib
+export NM=gcc-nm
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 %configure --disable-static
 make  %{?_smp_mflags}
 
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1542499960
+export SOURCE_DATE_EPOCH=1566839714
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libe-book
 cp COPYING %{buildroot}/usr/share/package-licenses/libe-book/COPYING
