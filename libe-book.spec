@@ -5,7 +5,7 @@
 #
 Name     : libe-book
 Version  : 0.1.3
-Release  : 9
+Release  : 10
 URL      : https://dev-www.libreoffice.org/src/libe-book-0.1.3.tar.xz
 Source0  : https://dev-www.libreoffice.org/src/libe-book-0.1.3.tar.xz
 Summary  : Library for parsing various reflowable ebook formats
