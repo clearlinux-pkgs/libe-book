@@ -5,7 +5,7 @@
 #
 Name     : libe-book
 Version  : 0.1.3
-Release  : 10
+Release  : 11
 URL      : https://dev-www.libreoffice.org/src/libe-book-0.1.3.tar.xz
 Source0  : https://dev-www.libreoffice.org/src/libe-book-0.1.3.tar.xz
 Summary  : Library for parsing various reflowable ebook formats
@@ -94,7 +94,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1683823317
+export SOURCE_DATE_EPOCH=1685637222
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -126,7 +126,7 @@ cd ../buildavx2;
 make %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1683823317
+export SOURCE_DATE_EPOCH=1685637222
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libe-book
 cp %{_builddir}/libe-book-%{version}/COPYING %{buildroot}/usr/share/package-licenses/libe-book/9744cedce099f727b327cd9913a1fdc58a7f5599 || :
@@ -150,7 +150,6 @@ popd
 
 %files dev
 %defattr(-,root,root,-)
-/V3/usr/lib64/libe-book-0.1.so
 /usr/include/libe-book-0.1/libe-book/EBOOKDocument.h
 /usr/include/libe-book-0.1/libe-book/libe-book.h
 /usr/lib64/libe-book-0.1.so
@@ -162,7 +161,6 @@ popd
 
 %files lib
 %defattr(-,root,root,-)
-/V3/usr/lib64/libe-book-0.1.so.1
 /V3/usr/lib64/libe-book-0.1.so.1.0.3
 /usr/lib64/libe-book-0.1.so.1
 /usr/lib64/libe-book-0.1.so.1.0.3
